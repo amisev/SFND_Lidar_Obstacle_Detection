@@ -1,0 +1,185 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ -G Ninja /Users/alexey/Courses/SFND_Lidar_Obstacle_Detection
+CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- The C compiler identification is AppleClang 14.0.0.14000029
+-- The CXX compiler identification is AppleClang 14.0.0.14000029
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Checking for module 'eigen3'
+--   Found eigen3, version 3.4.0
+-- Found Eigen: /opt/homebrew/include/eigen3 (Required is at least version "3.1") 
+-- Eigen found (include: /opt/homebrew/include/eigen3, version: 3.4.0)
+-- Found Boost: /opt/homebrew/lib/cmake/Boost-1.79.0/BoostConfig.cmake (found suitable version "1.79.0", minimum required is "1.65.0") found components: system filesystem date_time iostreams serialization 
+-- Checking for module 'flann'
+--   Found flann, version 1.9.1
+-- Found FLANN: /opt/homebrew/lib/libflann_cpp.dylib  
+-- FLANN found (include: /opt/homebrew/include, lib: /opt/homebrew/lib/libflann_cpp.dylib)
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Found GLEW: /opt/homebrew/lib/libGLEW.dylib  
+-- Found OpenGL: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/System/Library/Frameworks/OpenGL.framework  found components: OpenGL 
+-- Found JsonCpp: /opt/homebrew/lib/libjsoncpp.dylib (found suitable version "1.9.5", minimum required is "0.7.0") 
+-- Found ZLIB: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/lib/libz.tbd (found version "1.2.11") 
+-- Found PNG: /opt/homebrew/lib/libpng.dylib (found version "1.6.38") 
+CMake Warning at /opt/homebrew/lib/cmake/vtk-9.1/VTK-vtk-module-find-packages.cmake:1243 (find_package):
+  By not providing "FindQt5.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "Qt5", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "Qt5" (requested
+  version 5.15) with any of the following names:
+
+    Qt5Config.cmake
+    qt5-config.cmake
+
+  Add the installation prefix of "Qt5" to CMAKE_PREFIX_PATH or set "Qt5_DIR"
+  to a directory containing one of the above files.  If "Qt5" provides a
+  separate development package or SDK, be sure it has been installed.
+Call Stack (most recent call first):
+  /opt/homebrew/lib/cmake/vtk-9.1/vtk-config.cmake:150 (include)
+  /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:270 (find_package)
+  /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:319 (find_VTK)
+  /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:543 (find_external_library)
+  CMakeLists.txt:10 (find_package)
+
+
+-- Could not find the VTK package due to a missing dependency: Qt5
+-- Found Eigen3: /opt/homebrew/include/eigen3 (found version "3.4.0") 
+-- Found EXPAT: /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/lib/libexpat.tbd (found version "2.4.1") 
+-- Found double-conversion: /opt/homebrew/lib/libdouble-conversion.dylib  
+-- Found LZ4: /opt/homebrew/lib/liblz4.dylib (found version "1.9.4") 
+-- Found LZMA: /opt/homebrew/lib/liblzma.dylib (found version "5.2.6") 
+-- Found utf8cpp: /opt/homebrew/include/utf8cpp  
+-- Found JPEG: /opt/homebrew/lib/libjpeg.dylib (found version "80") 
+-- Found TIFF: /opt/homebrew/lib/libtiff.dylib (found version "4.4.0")  
+CMake Warning at /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:270 (find_package):
+  Found package configuration file:
+
+    /opt/homebrew/lib/cmake/vtk-9.1/vtk-config.cmake
+
+  but it set VTK_FOUND to FALSE so package "VTK" is considered to be NOT
+  FOUND.  Reason given by package:
+
+  Could not find the VTK package with the following required components:
+  GUISupportQt.
+
+Call Stack (most recent call first):
+  /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:319 (find_VTK)
+  /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:543 (find_external_library)
+  CMakeLists.txt:10 (find_package)
+
+
+** WARNING ** 2d features related to vtk will be disabled
+** WARNING ** io features related to pcap will be disabled
+CMake Warning at /opt/homebrew/lib/cmake/vtk-9.1/VTK-vtk-module-find-packages.cmake:1243 (find_package):
+  By not providing "FindQt5.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "Qt5", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "Qt5" (requested
+  version 5.15) with any of the following names:
+
+    Qt5Config.cmake
+    qt5-config.cmake
+
+  Add the installation prefix of "Qt5" to CMAKE_PREFIX_PATH or set "Qt5_DIR"
+  to a directory containing one of the above files.  If "Qt5" provides a
+  separate development package or SDK, be sure it has been installed.
+Call Stack (most recent call first):
+  /opt/homebrew/lib/cmake/vtk-9.1/vtk-config.cmake:150 (include)
+  /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:270 (find_package)
+  /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:319 (find_VTK)
+  /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:543 (find_external_library)
+  CMakeLists.txt:10 (find_package)
+
+
+-- Could not find the VTK package due to a missing dependency: Qt5
+CMake Warning at /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:270 (find_package):
+  Found package configuration file:
+
+    /opt/homebrew/lib/cmake/vtk-9.1/vtk-config.cmake
+
+  but it set VTK_FOUND to FALSE so package "VTK" is considered to be NOT
+  FOUND.  Reason given by package:
+
+  Could not find the VTK package with the following required components:
+  GUISupportQt.
+
+Call Stack (most recent call first):
+  /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:319 (find_VTK)
+  /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:543 (find_external_library)
+  CMakeLists.txt:10 (find_package)
+
+
+** WARNING ** io features related to vtk will be disabled
+-- Checking for module 'libusb-1.0'
+--   Found libusb-1.0, version 1.0.26
+-- Found libusb: /opt/homebrew/lib/libusb-1.0.dylib  
+-- Eigen found (include: /opt/homebrew/include/eigen3, version: 3.4.0)
+CMake Warning at /opt/homebrew/lib/cmake/vtk-9.1/VTK-vtk-module-find-packages.cmake:1243 (find_package):
+  By not providing "FindQt5.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "Qt5", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "Qt5" (requested
+  version 5.15) with any of the following names:
+
+    Qt5Config.cmake
+    qt5-config.cmake
+
+  Add the installation prefix of "Qt5" to CMAKE_PREFIX_PATH or set "Qt5_DIR"
+  to a directory containing one of the above files.  If "Qt5" provides a
+  separate development package or SDK, be sure it has been installed.
+Call Stack (most recent call first):
+  /opt/homebrew/lib/cmake/vtk-9.1/vtk-config.cmake:150 (include)
+  /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:270 (find_package)
+  /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:319 (find_VTK)
+  /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:546 (find_external_library)
+  CMakeLists.txt:10 (find_package)
+
+
+-- Could not find the VTK package due to a missing dependency: Qt5
+CMake Warning at /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:270 (find_package):
+  Found package configuration file:
+
+    /opt/homebrew/lib/cmake/vtk-9.1/vtk-config.cmake
+
+  but it set VTK_FOUND to FALSE so package "VTK" is considered to be NOT
+  FOUND.  Reason given by package:
+
+  Could not find the VTK package with the following required components:
+  GUISupportQt.
+
+Call Stack (most recent call first):
+  /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:319 (find_VTK)
+  /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:546 (find_external_library)
+  CMakeLists.txt:10 (find_package)
+
+
+CMake Error at /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:63 (message):
+  visualization is required but vtk was not found
+Call Stack (most recent call first):
+  /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:357 (pcl_report_not_found)
+  /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:546 (find_external_library)
+  CMakeLists.txt:10 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/Users/alexey/Courses/SFND_Lidar_Obstacle_Detection/cmake-build-release/CMakeFiles/CMakeOutput.log".

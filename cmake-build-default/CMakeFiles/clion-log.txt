@@ -1,0 +1,45 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -DCMAKE_C_COMPILER=/usr/bin/gcc -DCMAKE_CXX_COMPILER=/usr/bin/g++ -G Ninja /Users/alexey/Courses/SFND_Lidar_Obstacle_Detection
+CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- Eigen found (include: /opt/homebrew/include/eigen3, version: 3.4.0)
+-- FLANN found (include: /opt/homebrew/include, lib: /opt/homebrew/lib/libflann_cpp.dylib)
+CMake Error at /opt/homebrew/lib/cmake/Qt5Core/Qt5CoreConfig.cmake:14 (message):
+  The imported target "Qt5::Core" references the file
+
+     "/opt/homebrew/.//mkspecs/macx-clang-arm64"
+
+  but this file does not exist.  Possible reasons include:
+
+  * The file was deleted, renamed, or moved to another location.
+
+  * An install or uninstall procedure did not complete successfully.
+
+  * The installation package was faulty and contained
+
+     "/opt/homebrew/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake"
+
+  but not all the files it references.
+
+Call Stack (most recent call first):
+  /opt/homebrew/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake:56 (_qt5_Core_check_file_exists)
+  /opt/homebrew/lib/cmake/Qt5Core/Qt5CoreConfig.cmake:227 (include)
+  /opt/homebrew/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake:93 (find_package)
+  /opt/homebrew/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake:93 (find_package)
+  /opt/homebrew/lib/cmake/Qt5OpenGL/Qt5OpenGLConfig.cmake:93 (find_package)
+  /opt/homebrew/lib/cmake/Qt5/Qt5Config.cmake:28 (find_package)
+  /opt/homebrew/lib/cmake/vtk-9.1/VTK-vtk-module-find-packages.cmake:1243 (find_package)
+  /opt/homebrew/lib/cmake/vtk-9.1/vtk-config.cmake:150 (include)
+  /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:270 (find_package)
+  /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:319 (find_VTK)
+  /opt/homebrew/share/pcl-1.12/PCLConfig.cmake:543 (find_external_library)
+  CMakeLists.txt:10 (find_package)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/Users/alexey/Courses/SFND_Lidar_Obstacle_Detection/cmake-build-default/CMakeFiles/CMakeOutput.log".

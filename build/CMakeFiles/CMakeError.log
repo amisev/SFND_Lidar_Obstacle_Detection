@@ -1,0 +1,1443 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+72
+2022-10-01 13:09:16.830 xcodebuild[36370:433319] [MT] DVTPlugInLoading: Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin), error = Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}, dyldError = dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0000): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)
+2022-10-01 13:09:16.836 xcodebuild[36370:433319] [MT] DVTAssertions: ASSERTION FAILURE in /System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot2/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/DVTFrameworks/DVTFrameworks-21304/DVTFoundation/PlugInArchitecture/DataModel/DVTPlugIn.m:374
+Details:  Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin)
+Please ensure Xcode packages are up-to-date — try running 'xcodebuild -runFirstLaunch'.
+
+NSBundle error: Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}
+Object:   <DVTPlugIn: 0x6000036c2620>
+Method:   -loadAssertingOnError:error:
+Thread:   <_NSMainThread: 0x6000012902c0>{number = 1, name = main}
+Hints: 
+
+Backtrace:
+  0   -[DVTAssertionHandler handleFailureInMethod:object:fileName:lineNumber:assertionSignature:messageFormat:arguments:] (in DVTFoundation)
+  1   _DVTAssertionHandler (in DVTFoundation)
+  2   _DVTAssertionFailureHandler (in DVTFoundation)
+  3   -[DVTPlugIn plugInManager] (in DVTFoundation)
+  4   -[DVTExtension _fireExtensionFaultAssertingOnError:error:] (in DVTFoundation)
+  5   __80-[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:]_block_invoke (in DVTFoundation)
+  6   _dispatch_client_callout (in libdispatch.dylib)
+  7   _dispatch_lane_barrier_sync_invoke_and_complete (in libdispatch.dylib)
+  8   DVTDispatchBarrierSync (in DVTFoundation)
+  9   -[DVTDispatchLock performLockedBlock:] (in DVTFoundation)
+ 10   -[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:] (in DVTFoundation)
+ 11   -[DVTExtension valueForKey:] (in DVTFoundation)
+ 12   _IDEInitializeOnePlugInAndPrerequisites (in IDEFoundation)
+ 13   _IDEInitializePlugIns (in IDEFoundation)
+ 14   IDEInitialize (in IDEFoundation)
+ 15   -[Xcode3CommandLineBuildTool run] (in Xcode3Core)
+ 16   XcodeBuildMain (in libxcodebuildLoader.dylib)
+ 17   start (in dyld)
+sh: line 1: 36372 Abort trap: 6           /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang 2> /dev/null
+cc: error: sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang 2> /dev/null' failed with exit code 34304: (null) (errno=Invalid argument)
+xcode-select: Failed to locate 'clang', requesting installation of command line developer tools.
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: -c 
+
+The output was:
+72
+2022-10-01 13:09:17.482 xcodebuild[36375:433339] [MT] DVTPlugInLoading: Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin), error = Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}, dyldError = dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0000): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)
+2022-10-01 13:09:17.489 xcodebuild[36375:433339] [MT] DVTAssertions: ASSERTION FAILURE in /System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot2/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/DVTFrameworks/DVTFrameworks-21304/DVTFoundation/PlugInArchitecture/DataModel/DVTPlugIn.m:374
+Details:  Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin)
+Please ensure Xcode packages are up-to-date — try running 'xcodebuild -runFirstLaunch'.
+
+NSBundle error: Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}
+Object:   <DVTPlugIn: 0x600001d52d00>
+Method:   -loadAssertingOnError:error:
+Thread:   <_NSMainThread: 0x6000039002c0>{number = 1, name = main}
+Hints: 
+
+Backtrace:
+  0   -[DVTAssertionHandler handleFailureInMethod:object:fileName:lineNumber:assertionSignature:messageFormat:arguments:] (in DVTFoundation)
+  1   _DVTAssertionHandler (in DVTFoundation)
+  2   _DVTAssertionFailureHandler (in DVTFoundation)
+  3   -[DVTPlugIn plugInManager] (in DVTFoundation)
+  4   -[DVTExtension _fireExtensionFaultAssertingOnError:error:] (in DVTFoundation)
+  5   __80-[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:]_block_invoke (in DVTFoundation)
+  6   _dispatch_client_callout (in libdispatch.dylib)
+  7   _dispatch_lane_barrier_sync_invoke_and_complete (in libdispatch.dylib)
+  8   DVTDispatchBarrierSync (in DVTFoundation)
+  9   -[DVTDispatchLock performLockedBlock:] (in DVTFoundation)
+ 10   -[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:] (in DVTFoundation)
+ 11   -[DVTExtension valueForKey:] (in DVTFoundation)
+ 12   _IDEInitializeOnePlugInAndPrerequisites (in IDEFoundation)
+ 13   _IDEInitializePlugIns (in IDEFoundation)
+ 14   IDEInitialize (in IDEFoundation)
+ 15   -[Xcode3CommandLineBuildTool run] (in Xcode3Core)
+ 16   XcodeBuildMain (in libxcodebuildLoader.dylib)
+ 17   start (in dyld)
+sh: line 1: 36377 Abort trap: 6           /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang 2> /dev/null
+cc: error: sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang 2> /dev/null' failed with exit code 34304: (null) (errno=Invalid argument)
+xcode-select: Failed to locate 'clang', requesting installation of command line developer tools.
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: -Aa 
+
+The output was:
+72
+2022-10-01 13:09:18.115 xcodebuild[36379:433400] [MT] DVTPlugInLoading: Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin), error = Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}, dyldError = dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0000): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)
+2022-10-01 13:09:18.121 xcodebuild[36379:433400] [MT] DVTAssertions: ASSERTION FAILURE in /System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot2/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/DVTFrameworks/DVTFrameworks-21304/DVTFoundation/PlugInArchitecture/DataModel/DVTPlugIn.m:374
+Details:  Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin)
+Please ensure Xcode packages are up-to-date — try running 'xcodebuild -runFirstLaunch'.
+
+NSBundle error: Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}
+Object:   <DVTPlugIn: 0x600002ef1900>
+Method:   -loadAssertingOnError:error:
+Thread:   <_NSMainThread: 0x600000ab82c0>{number = 1, name = main}
+Hints: 
+
+Backtrace:
+  0   -[DVTAssertionHandler handleFailureInMethod:object:fileName:lineNumber:assertionSignature:messageFormat:arguments:] (in DVTFoundation)
+  1   _DVTAssertionHandler (in DVTFoundation)
+  2   _DVTAssertionFailureHandler (in DVTFoundation)
+  3   -[DVTPlugIn plugInManager] (in DVTFoundation)
+  4   -[DVTExtension _fireExtensionFaultAssertingOnError:error:] (in DVTFoundation)
+  5   __80-[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:]_block_invoke (in DVTFoundation)
+  6   _dispatch_client_callout (in libdispatch.dylib)
+  7   _dispatch_lane_barrier_sync_invoke_and_complete (in libdispatch.dylib)
+  8   DVTDispatchBarrierSync (in DVTFoundation)
+  9   -[DVTDispatchLock performLockedBlock:] (in DVTFoundation)
+ 10   -[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:] (in DVTFoundation)
+ 11   -[DVTExtension valueForKey:] (in DVTFoundation)
+ 12   _IDEInitializeOnePlugInAndPrerequisites (in IDEFoundation)
+ 13   _IDEInitializePlugIns (in IDEFoundation)
+ 14   IDEInitialize (in IDEFoundation)
+ 15   -[Xcode3CommandLineBuildTool run] (in Xcode3Core)
+ 16   XcodeBuildMain (in libxcodebuildLoader.dylib)
+ 17   start (in dyld)
+sh: line 1: 36381 Abort trap: 6           /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang 2> /dev/null
+cc: error: sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang 2> /dev/null' failed with exit code 34304: (null) (errno=Invalid argument)
+xcode-select: Failed to locate 'clang', requesting installation of command line developer tools.
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: -D__CLASSIC_C__ 
+
+The output was:
+72
+2022-10-01 13:09:18.742 xcodebuild[36383:433419] [MT] DVTPlugInLoading: Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin), error = Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}, dyldError = dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0000): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)
+2022-10-01 13:09:18.749 xcodebuild[36383:433419] [MT] DVTAssertions: ASSERTION FAILURE in /System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot2/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/DVTFrameworks/DVTFrameworks-21304/DVTFoundation/PlugInArchitecture/DataModel/DVTPlugIn.m:374
+Details:  Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin)
+Please ensure Xcode packages are up-to-date — try running 'xcodebuild -runFirstLaunch'.
+
+NSBundle error: Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}
+Object:   <DVTPlugIn: 0x600001704dc0>
+Method:   -loadAssertingOnError:error:
+Thread:   <_NSMainThread: 0x6000033542c0>{number = 1, name = main}
+Hints: 
+
+Backtrace:
+  0   -[DVTAssertionHandler handleFailureInMethod:object:fileName:lineNumber:assertionSignature:messageFormat:arguments:] (in DVTFoundation)
+  1   _DVTAssertionHandler (in DVTFoundation)
+  2   _DVTAssertionFailureHandler (in DVTFoundation)
+  3   -[DVTPlugIn plugInManager] (in DVTFoundation)
+  4   -[DVTExtension _fireExtensionFaultAssertingOnError:error:] (in DVTFoundation)
+  5   __80-[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:]_block_invoke (in DVTFoundation)
+  6   _dispatch_client_callout (in libdispatch.dylib)
+  7   _dispatch_lane_barrier_sync_invoke_and_complete (in libdispatch.dylib)
+  8   DVTDispatchBarrierSync (in DVTFoundation)
+  9   -[DVTDispatchLock performLockedBlock:] (in DVTFoundation)
+ 10   -[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:] (in DVTFoundation)
+ 11   -[DVTExtension valueForKey:] (in DVTFoundation)
+ 12   _IDEInitializeOnePlugInAndPrerequisites (in IDEFoundation)
+ 13   _IDEInitializePlugIns (in IDEFoundation)
+ 14   IDEInitialize (in IDEFoundation)
+ 15   -[Xcode3CommandLineBuildTool run] (in Xcode3Core)
+ 16   XcodeBuildMain (in libxcodebuildLoader.dylib)
+ 17   start (in dyld)
+sh: line 1: 36385 Abort trap: 6           /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang 2> /dev/null
+cc: error: sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang 2> /dev/null' failed with exit code 34304: (null) (errno=Invalid argument)
+xcode-select: Failed to locate 'clang', requesting installation of command line developer tools.
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+72
+2022-10-01 13:09:19.369 xcodebuild[36387:433440] [MT] DVTPlugInLoading: Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin), error = Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}, dyldError = dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0000): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)
+2022-10-01 13:09:19.375 xcodebuild[36387:433440] [MT] DVTAssertions: ASSERTION FAILURE in /System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot2/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/DVTFrameworks/DVTFrameworks-21304/DVTFoundation/PlugInArchitecture/DataModel/DVTPlugIn.m:374
+Details:  Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin)
+Please ensure Xcode packages are up-to-date — try running 'xcodebuild -runFirstLaunch'.
+
+NSBundle error: Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}
+Object:   <DVTPlugIn: 0x6000036d21c0>
+Method:   -loadAssertingOnError:error:
+Thread:   <_NSMainThread: 0x60000129c2c0>{number = 1, name = main}
+Hints: 
+
+Backtrace:
+  0   -[DVTAssertionHandler handleFailureInMethod:object:fileName:lineNumber:assertionSignature:messageFormat:arguments:] (in DVTFoundation)
+  1   _DVTAssertionHandler (in DVTFoundation)
+  2   _DVTAssertionFailureHandler (in DVTFoundation)
+  3   -[DVTPlugIn plugInManager] (in DVTFoundation)
+  4   -[DVTExtension _fireExtensionFaultAssertingOnError:error:] (in DVTFoundation)
+  5   __80-[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:]_block_invoke (in DVTFoundation)
+  6   _dispatch_client_callout (in libdispatch.dylib)
+  7   _dispatch_lane_barrier_sync_invoke_and_complete (in libdispatch.dylib)
+  8   DVTDispatchBarrierSync (in DVTFoundation)
+  9   -[DVTDispatchLock performLockedBlock:] (in DVTFoundation)
+ 10   -[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:] (in DVTFoundation)
+ 11   -[DVTExtension valueForKey:] (in DVTFoundation)
+ 12   _IDEInitializeOnePlugInAndPrerequisites (in IDEFoundation)
+ 13   _IDEInitializePlugIns (in IDEFoundation)
+ 14   IDEInitialize (in IDEFoundation)
+ 15   -[Xcode3CommandLineBuildTool run] (in Xcode3Core)
+ 16   XcodeBuildMain (in libxcodebuildLoader.dylib)
+ 17   start (in dyld)
+sh: line 1: 36389 Abort trap: 6           /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang 2> /dev/null
+cc: error: sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang 2> /dev/null' failed with exit code 34304: (null) (errno=Invalid argument)
+xcode-select: Failed to locate 'clang', requesting installation of command line developer tools.
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+72
+2022-10-01 13:09:19.998 xcodebuild[36391:433459] [MT] DVTPlugInLoading: Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin), error = Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}, dyldError = dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0000): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)
+2022-10-01 13:09:20.005 xcodebuild[36391:433459] [MT] DVTAssertions: ASSERTION FAILURE in /System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot2/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/DVTFrameworks/DVTFrameworks-21304/DVTFoundation/PlugInArchitecture/DataModel/DVTPlugIn.m:374
+Details:  Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin)
+Please ensure Xcode packages are up-to-date — try running 'xcodebuild -runFirstLaunch'.
+
+NSBundle error: Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}
+Object:   <DVTPlugIn: 0x600003d15c20>
+Method:   -loadAssertingOnError:error:
+Thread:   <_NSMainThread: 0x6000019442c0>{number = 1, name = main}
+Hints: 
+
+Backtrace:
+  0   -[DVTAssertionHandler handleFailureInMethod:object:fileName:lineNumber:assertionSignature:messageFormat:arguments:] (in DVTFoundation)
+  1   _DVTAssertionHandler (in DVTFoundation)
+  2   _DVTAssertionFailureHandler (in DVTFoundation)
+  3   -[DVTPlugIn plugInManager] (in DVTFoundation)
+  4   -[DVTExtension _fireExtensionFaultAssertingOnError:error:] (in DVTFoundation)
+  5   __80-[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:]_block_invoke (in DVTFoundation)
+  6   _dispatch_client_callout (in libdispatch.dylib)
+  7   _dispatch_lane_barrier_sync_invoke_and_complete (in libdispatch.dylib)
+  8   DVTDispatchBarrierSync (in DVTFoundation)
+  9   -[DVTDispatchLock performLockedBlock:] (in DVTFoundation)
+ 10   -[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:] (in DVTFoundation)
+ 11   -[DVTExtension valueForKey:] (in DVTFoundation)
+ 12   _IDEInitializeOnePlugInAndPrerequisites (in IDEFoundation)
+ 13   _IDEInitializePlugIns (in IDEFoundation)
+ 14   IDEInitialize (in IDEFoundation)
+ 15   -[Xcode3CommandLineBuildTool run] (in Xcode3Core)
+ 16   XcodeBuildMain (in libxcodebuildLoader.dylib)
+ 17   start (in dyld)
+sh: line 1: 36393 Abort trap: 6           /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang 2> /dev/null
+cc: error: sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang 2> /dev/null' failed with exit code 34304: (null) (errno=Invalid argument)
+xcode-select: Failed to locate 'clang', requesting installation of command line developer tools.
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+72
+2022-10-01 13:09:20.620 xcodebuild[36395:433477] [MT] DVTPlugInLoading: Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin), error = Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}, dyldError = dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0000): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)
+2022-10-01 13:09:20.627 xcodebuild[36395:433477] [MT] DVTAssertions: ASSERTION FAILURE in /System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot2/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/DVTFrameworks/DVTFrameworks-21304/DVTFoundation/PlugInArchitecture/DataModel/DVTPlugIn.m:374
+Details:  Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin)
+Please ensure Xcode packages are up-to-date — try running 'xcodebuild -runFirstLaunch'.
+
+NSBundle error: Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}
+Object:   <DVTPlugIn: 0x60000341d5e0>
+Method:   -loadAssertingOnError:error:
+Thread:   <_NSMainThread: 0x6000010542c0>{number = 1, name = main}
+Hints: 
+
+Backtrace:
+  0   -[DVTAssertionHandler handleFailureInMethod:object:fileName:lineNumber:assertionSignature:messageFormat:arguments:] (in DVTFoundation)
+  1   _DVTAssertionHandler (in DVTFoundation)
+  2   _DVTAssertionFailureHandler (in DVTFoundation)
+  3   -[DVTPlugIn plugInManager] (in DVTFoundation)
+  4   -[DVTExtension _fireExtensionFaultAssertingOnError:error:] (in DVTFoundation)
+  5   __80-[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:]_block_invoke (in DVTFoundation)
+  6   _dispatch_client_callout (in libdispatch.dylib)
+  7   _dispatch_lane_barrier_sync_invoke_and_complete (in libdispatch.dylib)
+  8   DVTDispatchBarrierSync (in DVTFoundation)
+  9   -[DVTDispatchLock performLockedBlock:] (in DVTFoundation)
+ 10   -[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:] (in DVTFoundation)
+ 11   -[DVTExtension valueForKey:] (in DVTFoundation)
+ 12   _IDEInitializeOnePlugInAndPrerequisites (in IDEFoundation)
+ 13   _IDEInitializePlugIns (in IDEFoundation)
+ 14   IDEInitialize (in IDEFoundation)
+ 15   -[Xcode3CommandLineBuildTool run] (in Xcode3Core)
+ 16   XcodeBuildMain (in libxcodebuildLoader.dylib)
+ 17   start (in dyld)
+sh: line 1: 36397 Abort trap: 6           /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang 2> /dev/null
+cc: error: sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang 2> /dev/null' failed with exit code 34304: (null) (errno=Invalid argument)
+xcode-select: Failed to locate 'clang', requesting installation of command line developer tools.
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: -c 
+
+The output was:
+72
+2022-10-01 13:09:21.250 xcodebuild[36399:433497] [MT] DVTPlugInLoading: Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin), error = Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}, dyldError = dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0000): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)
+2022-10-01 13:09:21.256 xcodebuild[36399:433497] [MT] DVTAssertions: ASSERTION FAILURE in /System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot2/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/DVTFrameworks/DVTFrameworks-21304/DVTFoundation/PlugInArchitecture/DataModel/DVTPlugIn.m:374
+Details:  Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin)
+Please ensure Xcode packages are up-to-date — try running 'xcodebuild -runFirstLaunch'.
+
+NSBundle error: Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}
+Object:   <DVTPlugIn: 0x600000854000>
+Method:   -loadAssertingOnError:error:
+Thread:   <_NSMainThread: 0x600002c182c0>{number = 1, name = main}
+Hints: 
+
+Backtrace:
+  0   -[DVTAssertionHandler handleFailureInMethod:object:fileName:lineNumber:assertionSignature:messageFormat:arguments:] (in DVTFoundation)
+  1   _DVTAssertionHandler (in DVTFoundation)
+  2   _DVTAssertionFailureHandler (in DVTFoundation)
+  3   -[DVTPlugIn plugInManager] (in DVTFoundation)
+  4   -[DVTExtension _fireExtensionFaultAssertingOnError:error:] (in DVTFoundation)
+  5   __80-[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:]_block_invoke (in DVTFoundation)
+  6   _dispatch_client_callout (in libdispatch.dylib)
+  7   _dispatch_lane_barrier_sync_invoke_and_complete (in libdispatch.dylib)
+  8   DVTDispatchBarrierSync (in DVTFoundation)
+  9   -[DVTDispatchLock performLockedBlock:] (in DVTFoundation)
+ 10   -[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:] (in DVTFoundation)
+ 11   -[DVTExtension valueForKey:] (in DVTFoundation)
+ 12   _IDEInitializeOnePlugInAndPrerequisites (in IDEFoundation)
+ 13   _IDEInitializePlugIns (in IDEFoundation)
+ 14   IDEInitialize (in IDEFoundation)
+ 15   -[Xcode3CommandLineBuildTool run] (in Xcode3Core)
+ 16   XcodeBuildMain (in libxcodebuildLoader.dylib)
+ 17   start (in dyld)
+sh: line 1: 36401 Abort trap: 6           /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang 2> /dev/null
+cc: error: sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang 2> /dev/null' failed with exit code 34304: (null) (errno=Invalid argument)
+xcode-select: Failed to locate 'clang', requesting installation of command line developer tools.
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: -Aa 
+
+The output was:
+72
+2022-10-01 13:09:21.869 xcodebuild[36403:433516] [MT] DVTPlugInLoading: Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin), error = Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}, dyldError = dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0000): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)
+2022-10-01 13:09:21.875 xcodebuild[36403:433516] [MT] DVTAssertions: ASSERTION FAILURE in /System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot2/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/DVTFrameworks/DVTFrameworks-21304/DVTFoundation/PlugInArchitecture/DataModel/DVTPlugIn.m:374
+Details:  Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin)
+Please ensure Xcode packages are up-to-date — try running 'xcodebuild -runFirstLaunch'.
+
+NSBundle error: Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}
+Object:   <DVTPlugIn: 0x6000036cdc20>
+Method:   -loadAssertingOnError:error:
+Thread:   <_NSMainThread: 0x60000129c2c0>{number = 1, name = main}
+Hints: 
+
+Backtrace:
+  0   -[DVTAssertionHandler handleFailureInMethod:object:fileName:lineNumber:assertionSignature:messageFormat:arguments:] (in DVTFoundation)
+  1   _DVTAssertionHandler (in DVTFoundation)
+  2   _DVTAssertionFailureHandler (in DVTFoundation)
+  3   -[DVTPlugIn plugInManager] (in DVTFoundation)
+  4   -[DVTExtension _fireExtensionFaultAssertingOnError:error:] (in DVTFoundation)
+  5   __80-[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:]_block_invoke (in DVTFoundation)
+  6   _dispatch_client_callout (in libdispatch.dylib)
+  7   _dispatch_lane_barrier_sync_invoke_and_complete (in libdispatch.dylib)
+  8   DVTDispatchBarrierSync (in DVTFoundation)
+  9   -[DVTDispatchLock performLockedBlock:] (in DVTFoundation)
+ 10   -[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:] (in DVTFoundation)
+ 11   -[DVTExtension valueForKey:] (in DVTFoundation)
+ 12   _IDEInitializeOnePlugInAndPrerequisites (in IDEFoundation)
+ 13   _IDEInitializePlugIns (in IDEFoundation)
+ 14   IDEInitialize (in IDEFoundation)
+ 15   -[Xcode3CommandLineBuildTool run] (in Xcode3Core)
+ 16   XcodeBuildMain (in libxcodebuildLoader.dylib)
+ 17   start (in dyld)
+sh: line 1: 36405 Abort trap: 6           /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang 2> /dev/null
+cc: error: sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang 2> /dev/null' failed with exit code 34304: (null) (errno=Invalid argument)
+xcode-select: Failed to locate 'clang', requesting installation of command line developer tools.
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: -D__CLASSIC_C__ 
+
+The output was:
+72
+2022-10-01 13:09:22.498 xcodebuild[36407:433535] [MT] DVTPlugInLoading: Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin), error = Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}, dyldError = dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0000): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)
+2022-10-01 13:09:22.505 xcodebuild[36407:433535] [MT] DVTAssertions: ASSERTION FAILURE in /System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot2/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/DVTFrameworks/DVTFrameworks-21304/DVTFoundation/PlugInArchitecture/DataModel/DVTPlugIn.m:374
+Details:  Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin)
+Please ensure Xcode packages are up-to-date — try running 'xcodebuild -runFirstLaunch'.
+
+NSBundle error: Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}
+Object:   <DVTPlugIn: 0x600000ae6c60>
+Method:   -loadAssertingOnError:error:
+Thread:   <_NSMainThread: 0x600002eac2c0>{number = 1, name = main}
+Hints: 
+
+Backtrace:
+  0   -[DVTAssertionHandler handleFailureInMethod:object:fileName:lineNumber:assertionSignature:messageFormat:arguments:] (in DVTFoundation)
+  1   _DVTAssertionHandler (in DVTFoundation)
+  2   _DVTAssertionFailureHandler (in DVTFoundation)
+  3   -[DVTPlugIn plugInManager] (in DVTFoundation)
+  4   -[DVTExtension _fireExtensionFaultAssertingOnError:error:] (in DVTFoundation)
+  5   __80-[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:]_block_invoke (in DVTFoundation)
+  6   _dispatch_client_callout (in libdispatch.dylib)
+  7   _dispatch_lane_barrier_sync_invoke_and_complete (in libdispatch.dylib)
+  8   DVTDispatchBarrierSync (in DVTFoundation)
+  9   -[DVTDispatchLock performLockedBlock:] (in DVTFoundation)
+ 10   -[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:] (in DVTFoundation)
+ 11   -[DVTExtension valueForKey:] (in DVTFoundation)
+ 12   _IDEInitializeOnePlugInAndPrerequisites (in IDEFoundation)
+ 13   _IDEInitializePlugIns (in IDEFoundation)
+ 14   IDEInitialize (in IDEFoundation)
+ 15   -[Xcode3CommandLineBuildTool run] (in Xcode3Core)
+ 16   XcodeBuildMain (in libxcodebuildLoader.dylib)
+ 17   start (in dyld)
+sh: line 1: 36409 Abort trap: 6           /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang 2> /dev/null
+cc: error: sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang 2> /dev/null' failed with exit code 34304: (null) (errno=Invalid argument)
+xcode-select: Failed to locate 'clang', requesting installation of command line developer tools.
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+72
+2022-10-01 13:09:23.119 xcodebuild[36411:433556] [MT] DVTPlugInLoading: Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin), error = Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}, dyldError = dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0000): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)
+2022-10-01 13:09:23.126 xcodebuild[36411:433556] [MT] DVTAssertions: ASSERTION FAILURE in /System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot2/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/DVTFrameworks/DVTFrameworks-21304/DVTFoundation/PlugInArchitecture/DataModel/DVTPlugIn.m:374
+Details:  Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin)
+Please ensure Xcode packages are up-to-date — try running 'xcodebuild -runFirstLaunch'.
+
+NSBundle error: Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}
+Object:   <DVTPlugIn: 0x600002e1c640>
+Method:   -loadAssertingOnError:error:
+Thread:   <_NSMainThread: 0x600000a4c2c0>{number = 1, name = main}
+Hints: 
+
+Backtrace:
+  0   -[DVTAssertionHandler handleFailureInMethod:object:fileName:lineNumber:assertionSignature:messageFormat:arguments:] (in DVTFoundation)
+  1   _DVTAssertionHandler (in DVTFoundation)
+  2   _DVTAssertionFailureHandler (in DVTFoundation)
+  3   -[DVTPlugIn plugInManager] (in DVTFoundation)
+  4   -[DVTExtension _fireExtensionFaultAssertingOnError:error:] (in DVTFoundation)
+  5   __80-[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:]_block_invoke (in DVTFoundation)
+  6   _dispatch_client_callout (in libdispatch.dylib)
+  7   _dispatch_lane_barrier_sync_invoke_and_complete (in libdispatch.dylib)
+  8   DVTDispatchBarrierSync (in DVTFoundation)
+  9   -[DVTDispatchLock performLockedBlock:] (in DVTFoundation)
+ 10   -[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:] (in DVTFoundation)
+ 11   -[DVTExtension valueForKey:] (in DVTFoundation)
+ 12   _IDEInitializeOnePlugInAndPrerequisites (in IDEFoundation)
+ 13   _IDEInitializePlugIns (in IDEFoundation)
+ 14   IDEInitialize (in IDEFoundation)
+ 15   -[Xcode3CommandLineBuildTool run] (in Xcode3Core)
+ 16   XcodeBuildMain (in libxcodebuildLoader.dylib)
+ 17   start (in dyld)
+sh: line 1: 36413 Abort trap: 6           /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang 2> /dev/null
+cc: error: sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang 2> /dev/null' failed with exit code 34304: (null) (errno=Invalid argument)
+xcode-select: Failed to locate 'clang', requesting installation of command line developer tools.
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+72
+2022-10-01 13:09:23.747 xcodebuild[36415:433578] [MT] DVTPlugInLoading: Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin), error = Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}, dyldError = dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0000): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)
+2022-10-01 13:09:23.754 xcodebuild[36415:433578] [MT] DVTAssertions: ASSERTION FAILURE in /System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot2/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/DVTFrameworks/DVTFrameworks-21304/DVTFoundation/PlugInArchitecture/DataModel/DVTPlugIn.m:374
+Details:  Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin)
+Please ensure Xcode packages are up-to-date — try running 'xcodebuild -runFirstLaunch'.
+
+NSBundle error: Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}
+Object:   <DVTPlugIn: 0x60000320c5a0>
+Method:   -loadAssertingOnError:error:
+Thread:   <_NSMainThread: 0x60000165c2c0>{number = 1, name = main}
+Hints: 
+
+Backtrace:
+  0   -[DVTAssertionHandler handleFailureInMethod:object:fileName:lineNumber:assertionSignature:messageFormat:arguments:] (in DVTFoundation)
+  1   _DVTAssertionHandler (in DVTFoundation)
+  2   _DVTAssertionFailureHandler (in DVTFoundation)
+  3   -[DVTPlugIn plugInManager] (in DVTFoundation)
+  4   -[DVTExtension _fireExtensionFaultAssertingOnError:error:] (in DVTFoundation)
+  5   __80-[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:]_block_invoke (in DVTFoundation)
+  6   _dispatch_client_callout (in libdispatch.dylib)
+  7   _dispatch_lane_barrier_sync_invoke_and_complete (in libdispatch.dylib)
+  8   DVTDispatchBarrierSync (in DVTFoundation)
+  9   -[DVTDispatchLock performLockedBlock:] (in DVTFoundation)
+ 10   -[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:] (in DVTFoundation)
+ 11   -[DVTExtension valueForKey:] (in DVTFoundation)
+ 12   _IDEInitializeOnePlugInAndPrerequisites (in IDEFoundation)
+ 13   _IDEInitializePlugIns (in IDEFoundation)
+ 14   IDEInitialize (in IDEFoundation)
+ 15   -[Xcode3CommandLineBuildTool run] (in Xcode3Core)
+ 16   XcodeBuildMain (in libxcodebuildLoader.dylib)
+ 17   start (in dyld)
+sh: line 1: 36417 Abort trap: 6           /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang 2> /dev/null
+cc: error: sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang 2> /dev/null' failed with exit code 34304: (null) (errno=Invalid argument)
+xcode-select: Failed to locate 'clang', requesting installation of command line developer tools.
+
+
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+2022-10-01 13:09:24.365 xcodebuild[36419:433608] [MT] DVTPlugInLoading: Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin), error = Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}, dyldError = dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0000): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)
+2022-10-01 13:09:24.371 xcodebuild[36419:433608] [MT] DVTAssertions: ASSERTION FAILURE in /System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot2/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/DVTFrameworks/DVTFrameworks-21304/DVTFoundation/PlugInArchitecture/DataModel/DVTPlugIn.m:374
+Details:  Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin)
+Please ensure Xcode packages are up-to-date — try running 'xcodebuild -runFirstLaunch'.
+
+NSBundle error: Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}
+Object:   <DVTPlugIn: 0x600002806260>
+Method:   -loadAssertingOnError:error:
+Thread:   <_NSMainThread: 0x600000c4c2c0>{number = 1, name = main}
+Hints: 
+
+Backtrace:
+  0   -[DVTAssertionHandler handleFailureInMethod:object:fileName:lineNumber:assertionSignature:messageFormat:arguments:] (in DVTFoundation)
+  1   _DVTAssertionHandler (in DVTFoundation)
+  2   _DVTAssertionFailureHandler (in DVTFoundation)
+  3   -[DVTPlugIn plugInManager] (in DVTFoundation)
+  4   -[DVTExtension _fireExtensionFaultAssertingOnError:error:] (in DVTFoundation)
+  5   __80-[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:]_block_invoke (in DVTFoundation)
+  6   _dispatch_client_callout (in libdispatch.dylib)
+  7   _dispatch_lane_barrier_sync_invoke_and_complete (in libdispatch.dylib)
+  8   DVTDispatchBarrierSync (in DVTFoundation)
+  9   -[DVTDispatchLock performLockedBlock:] (in DVTFoundation)
+ 10   -[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:] (in DVTFoundation)
+ 11   -[DVTExtension valueForKey:] (in DVTFoundation)
+ 12   _IDEInitializeOnePlugInAndPrerequisites (in IDEFoundation)
+ 13   _IDEInitializePlugIns (in IDEFoundation)
+ 14   IDEInitialize (in IDEFoundation)
+ 15   -[Xcode3CommandLineBuildTool run] (in Xcode3Core)
+ 16   XcodeBuildMain (in libxcodebuildLoader.dylib)
+ 17   start (in dyld)
+sh: line 1: 36421 Abort trap: 6           /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang 2> /dev/null
+cc: error: sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang 2> /dev/null' failed with exit code 34304: (null) (errno=Invalid argument)
+xcode-select: Failed to locate 'clang', requesting installation of command line developer tools.
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+2022-10-01 13:09:24.983 xcodebuild[36423:433629] [MT] DVTPlugInLoading: Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin), error = Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}, dyldError = dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0000): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)
+2022-10-01 13:09:24.990 xcodebuild[36423:433629] [MT] DVTAssertions: ASSERTION FAILURE in /System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot2/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/DVTFrameworks/DVTFrameworks-21304/DVTFoundation/PlugInArchitecture/DataModel/DVTPlugIn.m:374
+Details:  Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin)
+Please ensure Xcode packages are up-to-date — try running 'xcodebuild -runFirstLaunch'.
+
+NSBundle error: Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}
+Object:   <DVTPlugIn: 0x600000498dc0>
+Method:   -loadAssertingOnError:error:
+Thread:   <_NSMainThread: 0x6000020d42c0>{number = 1, name = main}
+Hints: 
+
+Backtrace:
+  0   -[DVTAssertionHandler handleFailureInMethod:object:fileName:lineNumber:assertionSignature:messageFormat:arguments:] (in DVTFoundation)
+  1   _DVTAssertionHandler (in DVTFoundation)
+  2   _DVTAssertionFailureHandler (in DVTFoundation)
+  3   -[DVTPlugIn plugInManager] (in DVTFoundation)
+  4   -[DVTExtension _fireExtensionFaultAssertingOnError:error:] (in DVTFoundation)
+  5   __80-[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:]_block_invoke (in DVTFoundation)
+  6   _dispatch_client_callout (in libdispatch.dylib)
+  7   _dispatch_lane_barrier_sync_invoke_and_complete (in libdispatch.dylib)
+  8   DVTDispatchBarrierSync (in DVTFoundation)
+  9   -[DVTDispatchLock performLockedBlock:] (in DVTFoundation)
+ 10   -[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:] (in DVTFoundation)
+ 11   -[DVTExtension valueForKey:] (in DVTFoundation)
+ 12   _IDEInitializeOnePlugInAndPrerequisites (in IDEFoundation)
+ 13   _IDEInitializePlugIns (in IDEFoundation)
+ 14   IDEInitialize (in IDEFoundation)
+ 15   -[Xcode3CommandLineBuildTool run] (in Xcode3Core)
+ 16   XcodeBuildMain (in libxcodebuildLoader.dylib)
+ 17   start (in dyld)
+sh: line 1: 36425 Abort trap: 6           /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang 2> /dev/null
+cc: error: sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang 2> /dev/null' failed with exit code 34304: (null) (errno=Invalid argument)
+xcode-select: Failed to locate 'clang', requesting installation of command line developer tools.
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+72
+2022-10-01 13:09:26.246 xcodebuild[36431:433683] [MT] DVTPlugInLoading: Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin), error = Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}, dyldError = dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0000): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)
+2022-10-01 13:09:26.253 xcodebuild[36431:433683] [MT] DVTAssertions: ASSERTION FAILURE in /System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot2/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/DVTFrameworks/DVTFrameworks-21304/DVTFoundation/PlugInArchitecture/DataModel/DVTPlugIn.m:374
+Details:  Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin)
+Please ensure Xcode packages are up-to-date — try running 'xcodebuild -runFirstLaunch'.
+
+NSBundle error: Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}
+Object:   <DVTPlugIn: 0x6000006c7700>
+Method:   -loadAssertingOnError:error:
+Thread:   <_NSMainThread: 0x6000022882c0>{number = 1, name = main}
+Hints: 
+
+Backtrace:
+  0   -[DVTAssertionHandler handleFailureInMethod:object:fileName:lineNumber:assertionSignature:messageFormat:arguments:] (in DVTFoundation)
+  1   _DVTAssertionHandler (in DVTFoundation)
+  2   _DVTAssertionFailureHandler (in DVTFoundation)
+  3   -[DVTPlugIn plugInManager] (in DVTFoundation)
+  4   -[DVTExtension _fireExtensionFaultAssertingOnError:error:] (in DVTFoundation)
+  5   __80-[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:]_block_invoke (in DVTFoundation)
+  6   _dispatch_client_callout (in libdispatch.dylib)
+  7   _dispatch_lane_barrier_sync_invoke_and_complete (in libdispatch.dylib)
+  8   DVTDispatchBarrierSync (in DVTFoundation)
+  9   -[DVTDispatchLock performLockedBlock:] (in DVTFoundation)
+ 10   -[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:] (in DVTFoundation)
+ 11   -[DVTExtension valueForKey:] (in DVTFoundation)
+ 12   _IDEInitializeOnePlugInAndPrerequisites (in IDEFoundation)
+ 13   _IDEInitializePlugIns (in IDEFoundation)
+ 14   IDEInitialize (in IDEFoundation)
+ 15   -[Xcode3CommandLineBuildTool run] (in Xcode3Core)
+ 16   XcodeBuildMain (in libxcodebuildLoader.dylib)
+ 17   start (in dyld)
+sh: line 1: 36433 Abort trap: 6           /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang++ 2> /dev/null
+c++: error: sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang++ 2> /dev/null' failed with exit code 34304: (null) (errno=Invalid argument)
+xcode-select: Failed to locate 'clang++', requesting installation of command line developer tools.
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags: -c 
+
+The output was:
+72
+2022-10-01 13:09:26.876 xcodebuild[36435:433702] [MT] DVTPlugInLoading: Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin), error = Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}, dyldError = dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0000): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)
+2022-10-01 13:09:26.882 xcodebuild[36435:433702] [MT] DVTAssertions: ASSERTION FAILURE in /System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot2/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/DVTFrameworks/DVTFrameworks-21304/DVTFoundation/PlugInArchitecture/DataModel/DVTPlugIn.m:374
+Details:  Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin)
+Please ensure Xcode packages are up-to-date — try running 'xcodebuild -runFirstLaunch'.
+
+NSBundle error: Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}
+Object:   <DVTPlugIn: 0x600002456300>
+Method:   -loadAssertingOnError:error:
+Thread:   <_NSMainThread: 0x60000001c2c0>{number = 1, name = main}
+Hints: 
+
+Backtrace:
+  0   -[DVTAssertionHandler handleFailureInMethod:object:fileName:lineNumber:assertionSignature:messageFormat:arguments:] (in DVTFoundation)
+  1   _DVTAssertionHandler (in DVTFoundation)
+  2   _DVTAssertionFailureHandler (in DVTFoundation)
+  3   -[DVTPlugIn plugInManager] (in DVTFoundation)
+  4   -[DVTExtension _fireExtensionFaultAssertingOnError:error:] (in DVTFoundation)
+  5   __80-[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:]_block_invoke (in DVTFoundation)
+  6   _dispatch_client_callout (in libdispatch.dylib)
+  7   _dispatch_lane_barrier_sync_invoke_and_complete (in libdispatch.dylib)
+  8   DVTDispatchBarrierSync (in DVTFoundation)
+  9   -[DVTDispatchLock performLockedBlock:] (in DVTFoundation)
+ 10   -[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:] (in DVTFoundation)
+ 11   -[DVTExtension valueForKey:] (in DVTFoundation)
+ 12   _IDEInitializeOnePlugInAndPrerequisites (in IDEFoundation)
+ 13   _IDEInitializePlugIns (in IDEFoundation)
+ 14   IDEInitialize (in IDEFoundation)
+ 15   -[Xcode3CommandLineBuildTool run] (in Xcode3Core)
+ 16   XcodeBuildMain (in libxcodebuildLoader.dylib)
+ 17   start (in dyld)
+sh: line 1: 36437 Abort trap: 6           /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang++ 2> /dev/null
+c++: error: sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang++ 2> /dev/null' failed with exit code 34304: (null) (errno=Invalid argument)
+xcode-select: Failed to locate 'clang++', requesting installation of command line developer tools.
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags: --c++ 
+
+The output was:
+72
+2022-10-01 13:09:27.504 xcodebuild[36439:433721] [MT] DVTPlugInLoading: Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin), error = Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}, dyldError = dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0000): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)
+2022-10-01 13:09:27.511 xcodebuild[36439:433721] [MT] DVTAssertions: ASSERTION FAILURE in /System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot2/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/DVTFrameworks/DVTFrameworks-21304/DVTFoundation/PlugInArchitecture/DataModel/DVTPlugIn.m:374
+Details:  Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin)
+Please ensure Xcode packages are up-to-date — try running 'xcodebuild -runFirstLaunch'.
+
+NSBundle error: Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}
+Object:   <DVTPlugIn: 0x60000302dc20>
+Method:   -loadAssertingOnError:error:
+Thread:   <_NSMainThread: 0x6000014602c0>{number = 1, name = main}
+Hints: 
+
+Backtrace:
+  0   -[DVTAssertionHandler handleFailureInMethod:object:fileName:lineNumber:assertionSignature:messageFormat:arguments:] (in DVTFoundation)
+  1   _DVTAssertionHandler (in DVTFoundation)
+  2   _DVTAssertionFailureHandler (in DVTFoundation)
+  3   -[DVTPlugIn plugInManager] (in DVTFoundation)
+  4   -[DVTExtension _fireExtensionFaultAssertingOnError:error:] (in DVTFoundation)
+  5   __80-[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:]_block_invoke (in DVTFoundation)
+  6   _dispatch_client_callout (in libdispatch.dylib)
+  7   _dispatch_lane_barrier_sync_invoke_and_complete (in libdispatch.dylib)
+  8   DVTDispatchBarrierSync (in DVTFoundation)
+  9   -[DVTDispatchLock performLockedBlock:] (in DVTFoundation)
+ 10   -[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:] (in DVTFoundation)
+ 11   -[DVTExtension valueForKey:] (in DVTFoundation)
+ 12   _IDEInitializeOnePlugInAndPrerequisites (in IDEFoundation)
+ 13   _IDEInitializePlugIns (in IDEFoundation)
+ 14   IDEInitialize (in IDEFoundation)
+ 15   -[Xcode3CommandLineBuildTool run] (in Xcode3Core)
+ 16   XcodeBuildMain (in libxcodebuildLoader.dylib)
+ 17   start (in dyld)
+sh: line 1: 36441 Abort trap: 6           /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang++ 2> /dev/null
+c++: error: sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang++ 2> /dev/null' failed with exit code 34304: (null) (errno=Invalid argument)
+xcode-select: Failed to locate 'clang++', requesting installation of command line developer tools.
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags: --ec++ 
+
+The output was:
+72
+2022-10-01 13:09:28.144 xcodebuild[36443:433750] [MT] DVTPlugInLoading: Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin), error = Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}, dyldError = dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0000): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)
+2022-10-01 13:09:28.151 xcodebuild[36443:433750] [MT] DVTAssertions: ASSERTION FAILURE in /System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot2/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/DVTFrameworks/DVTFrameworks-21304/DVTFoundation/PlugInArchitecture/DataModel/DVTPlugIn.m:374
+Details:  Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin)
+Please ensure Xcode packages are up-to-date — try running 'xcodebuild -runFirstLaunch'.
+
+NSBundle error: Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}
+Object:   <DVTPlugIn: 0x600000e15400>
+Method:   -loadAssertingOnError:error:
+Thread:   <_NSMainThread: 0x600002a5c2c0>{number = 1, name = main}
+Hints: 
+
+Backtrace:
+  0   -[DVTAssertionHandler handleFailureInMethod:object:fileName:lineNumber:assertionSignature:messageFormat:arguments:] (in DVTFoundation)
+  1   _DVTAssertionHandler (in DVTFoundation)
+  2   _DVTAssertionFailureHandler (in DVTFoundation)
+  3   -[DVTPlugIn plugInManager] (in DVTFoundation)
+  4   -[DVTExtension _fireExtensionFaultAssertingOnError:error:] (in DVTFoundation)
+  5   __80-[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:]_block_invoke (in DVTFoundation)
+  6   _dispatch_client_callout (in libdispatch.dylib)
+  7   _dispatch_lane_barrier_sync_invoke_and_complete (in libdispatch.dylib)
+  8   DVTDispatchBarrierSync (in DVTFoundation)
+  9   -[DVTDispatchLock performLockedBlock:] (in DVTFoundation)
+ 10   -[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:] (in DVTFoundation)
+ 11   -[DVTExtension valueForKey:] (in DVTFoundation)
+ 12   _IDEInitializeOnePlugInAndPrerequisites (in IDEFoundation)
+ 13   _IDEInitializePlugIns (in IDEFoundation)
+ 14   IDEInitialize (in IDEFoundation)
+ 15   -[Xcode3CommandLineBuildTool run] (in Xcode3Core)
+ 16   XcodeBuildMain (in libxcodebuildLoader.dylib)
+ 17   start (in dyld)
+sh: line 1: 36445 Abort trap: 6           /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang++ 2> /dev/null
+c++: error: sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang++ 2> /dev/null' failed with exit code 34304: (null) (errno=Invalid argument)
+xcode-select: Failed to locate 'clang++', requesting installation of command line developer tools.
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+72
+2022-10-01 13:09:28.785 xcodebuild[36447:433828] [MT] DVTPlugInLoading: Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin), error = Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}, dyldError = dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0000): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)
+2022-10-01 13:09:28.792 xcodebuild[36447:433828] [MT] DVTAssertions: ASSERTION FAILURE in /System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot2/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/DVTFrameworks/DVTFrameworks-21304/DVTFoundation/PlugInArchitecture/DataModel/DVTPlugIn.m:374
+Details:  Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin)
+Please ensure Xcode packages are up-to-date — try running 'xcodebuild -runFirstLaunch'.
+
+NSBundle error: Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}
+Object:   <DVTPlugIn: 0x600001989680>
+Method:   -loadAssertingOnError:error:
+Thread:   <_NSMainThread: 0x600003dc02c0>{number = 1, name = main}
+Hints: 
+
+Backtrace:
+  0   -[DVTAssertionHandler handleFailureInMethod:object:fileName:lineNumber:assertionSignature:messageFormat:arguments:] (in DVTFoundation)
+  1   _DVTAssertionHandler (in DVTFoundation)
+  2   _DVTAssertionFailureHandler (in DVTFoundation)
+  3   -[DVTPlugIn plugInManager] (in DVTFoundation)
+  4   -[DVTExtension _fireExtensionFaultAssertingOnError:error:] (in DVTFoundation)
+  5   __80-[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:]_block_invoke (in DVTFoundation)
+  6   _dispatch_client_callout (in libdispatch.dylib)
+  7   _dispatch_lane_barrier_sync_invoke_and_complete (in libdispatch.dylib)
+  8   DVTDispatchBarrierSync (in DVTFoundation)
+  9   -[DVTDispatchLock performLockedBlock:] (in DVTFoundation)
+ 10   -[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:] (in DVTFoundation)
+ 11   -[DVTExtension valueForKey:] (in DVTFoundation)
+ 12   _IDEInitializeOnePlugInAndPrerequisites (in IDEFoundation)
+ 13   _IDEInitializePlugIns (in IDEFoundation)
+ 14   IDEInitialize (in IDEFoundation)
+ 15   -[Xcode3CommandLineBuildTool run] (in Xcode3Core)
+ 16   XcodeBuildMain (in libxcodebuildLoader.dylib)
+ 17   start (in dyld)
+sh: line 1: 36449 Abort trap: 6           /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang++ 2> /dev/null
+c++: error: sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang++ 2> /dev/null' failed with exit code 34304: (null) (errno=Invalid argument)
+xcode-select: Failed to locate 'clang++', requesting installation of command line developer tools.
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+72
+2022-10-01 13:09:29.415 xcodebuild[36451:433853] [MT] DVTPlugInLoading: Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin), error = Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}, dyldError = dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0000): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)
+2022-10-01 13:09:29.422 xcodebuild[36451:433853] [MT] DVTAssertions: ASSERTION FAILURE in /System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot2/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/DVTFrameworks/DVTFrameworks-21304/DVTFoundation/PlugInArchitecture/DataModel/DVTPlugIn.m:374
+Details:  Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin)
+Please ensure Xcode packages are up-to-date — try running 'xcodebuild -runFirstLaunch'.
+
+NSBundle error: Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}
+Object:   <DVTPlugIn: 0x600003e4fac0>
+Method:   -loadAssertingOnError:error:
+Thread:   <_NSMainThread: 0x600001a002c0>{number = 1, name = main}
+Hints: 
+
+Backtrace:
+  0   -[DVTAssertionHandler handleFailureInMethod:object:fileName:lineNumber:assertionSignature:messageFormat:arguments:] (in DVTFoundation)
+  1   _DVTAssertionHandler (in DVTFoundation)
+  2   _DVTAssertionFailureHandler (in DVTFoundation)
+  3   -[DVTPlugIn plugInManager] (in DVTFoundation)
+  4   -[DVTExtension _fireExtensionFaultAssertingOnError:error:] (in DVTFoundation)
+  5   __80-[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:]_block_invoke (in DVTFoundation)
+  6   _dispatch_client_callout (in libdispatch.dylib)
+  7   _dispatch_lane_barrier_sync_invoke_and_complete (in libdispatch.dylib)
+  8   DVTDispatchBarrierSync (in DVTFoundation)
+  9   -[DVTDispatchLock performLockedBlock:] (in DVTFoundation)
+ 10   -[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:] (in DVTFoundation)
+ 11   -[DVTExtension valueForKey:] (in DVTFoundation)
+ 12   _IDEInitializeOnePlugInAndPrerequisites (in IDEFoundation)
+ 13   _IDEInitializePlugIns (in IDEFoundation)
+ 14   IDEInitialize (in IDEFoundation)
+ 15   -[Xcode3CommandLineBuildTool run] (in Xcode3Core)
+ 16   XcodeBuildMain (in libxcodebuildLoader.dylib)
+ 17   start (in dyld)
+sh: line 1: 36453 Abort trap: 6           /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang++ 2> /dev/null
+c++: error: sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang++ 2> /dev/null' failed with exit code 34304: (null) (errno=Invalid argument)
+xcode-select: Failed to locate 'clang++', requesting installation of command line developer tools.
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+72
+2022-10-01 13:09:30.040 xcodebuild[36455:433874] [MT] DVTPlugInLoading: Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin), error = Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}, dyldError = dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0000): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)
+2022-10-01 13:09:30.047 xcodebuild[36455:433874] [MT] DVTAssertions: ASSERTION FAILURE in /System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot2/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/DVTFrameworks/DVTFrameworks-21304/DVTFoundation/PlugInArchitecture/DataModel/DVTPlugIn.m:374
+Details:  Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin)
+Please ensure Xcode packages are up-to-date — try running 'xcodebuild -runFirstLaunch'.
+
+NSBundle error: Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}
+Object:   <DVTPlugIn: 0x600003cff200>
+Method:   -loadAssertingOnError:error:
+Thread:   <_NSMainThread: 0x6000018b02c0>{number = 1, name = main}
+Hints: 
+
+Backtrace:
+  0   -[DVTAssertionHandler handleFailureInMethod:object:fileName:lineNumber:assertionSignature:messageFormat:arguments:] (in DVTFoundation)
+  1   _DVTAssertionHandler (in DVTFoundation)
+  2   _DVTAssertionFailureHandler (in DVTFoundation)
+  3   -[DVTPlugIn plugInManager] (in DVTFoundation)
+  4   -[DVTExtension _fireExtensionFaultAssertingOnError:error:] (in DVTFoundation)
+  5   __80-[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:]_block_invoke (in DVTFoundation)
+  6   _dispatch_client_callout (in libdispatch.dylib)
+  7   _dispatch_lane_barrier_sync_invoke_and_complete (in libdispatch.dylib)
+  8   DVTDispatchBarrierSync (in DVTFoundation)
+  9   -[DVTDispatchLock performLockedBlock:] (in DVTFoundation)
+ 10   -[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:] (in DVTFoundation)
+ 11   -[DVTExtension valueForKey:] (in DVTFoundation)
+ 12   _IDEInitializeOnePlugInAndPrerequisites (in IDEFoundation)
+ 13   _IDEInitializePlugIns (in IDEFoundation)
+ 14   IDEInitialize (in IDEFoundation)
+ 15   -[Xcode3CommandLineBuildTool run] (in Xcode3Core)
+ 16   XcodeBuildMain (in libxcodebuildLoader.dylib)
+ 17   start (in dyld)
+sh: line 1: 36457 Abort trap: 6           /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang++ 2> /dev/null
+c++: error: sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang++ 2> /dev/null' failed with exit code 34304: (null) (errno=Invalid argument)
+xcode-select: Failed to locate 'clang++', requesting installation of command line developer tools.
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags: -c 
+
+The output was:
+72
+2022-10-01 13:09:30.666 xcodebuild[36459:433893] [MT] DVTPlugInLoading: Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin), error = Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}, dyldError = dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0000): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)
+2022-10-01 13:09:30.673 xcodebuild[36459:433893] [MT] DVTAssertions: ASSERTION FAILURE in /System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot2/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/DVTFrameworks/DVTFrameworks-21304/DVTFoundation/PlugInArchitecture/DataModel/DVTPlugIn.m:374
+Details:  Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin)
+Please ensure Xcode packages are up-to-date — try running 'xcodebuild -runFirstLaunch'.
+
+NSBundle error: Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}
+Object:   <DVTPlugIn: 0x600003c4c5a0>
+Method:   -loadAssertingOnError:error:
+Thread:   <_NSMainThread: 0x6000018182c0>{number = 1, name = main}
+Hints: 
+
+Backtrace:
+  0   -[DVTAssertionHandler handleFailureInMethod:object:fileName:lineNumber:assertionSignature:messageFormat:arguments:] (in DVTFoundation)
+  1   _DVTAssertionHandler (in DVTFoundation)
+  2   _DVTAssertionFailureHandler (in DVTFoundation)
+  3   -[DVTPlugIn plugInManager] (in DVTFoundation)
+  4   -[DVTExtension _fireExtensionFaultAssertingOnError:error:] (in DVTFoundation)
+  5   __80-[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:]_block_invoke (in DVTFoundation)
+  6   _dispatch_client_callout (in libdispatch.dylib)
+  7   _dispatch_lane_barrier_sync_invoke_and_complete (in libdispatch.dylib)
+  8   DVTDispatchBarrierSync (in DVTFoundation)
+  9   -[DVTDispatchLock performLockedBlock:] (in DVTFoundation)
+ 10   -[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:] (in DVTFoundation)
+ 11   -[DVTExtension valueForKey:] (in DVTFoundation)
+ 12   _IDEInitializeOnePlugInAndPrerequisites (in IDEFoundation)
+ 13   _IDEInitializePlugIns (in IDEFoundation)
+ 14   IDEInitialize (in IDEFoundation)
+ 15   -[Xcode3CommandLineBuildTool run] (in Xcode3Core)
+ 16   XcodeBuildMain (in libxcodebuildLoader.dylib)
+ 17   start (in dyld)
+sh: line 1: 36461 Abort trap: 6           /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang++ 2> /dev/null
+c++: error: sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang++ 2> /dev/null' failed with exit code 34304: (null) (errno=Invalid argument)
+xcode-select: Failed to locate 'clang++', requesting installation of command line developer tools.
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags: --c++ 
+
+The output was:
+72
+2022-10-01 13:09:31.287 xcodebuild[36463:433911] [MT] DVTPlugInLoading: Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin), error = Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}, dyldError = dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0000): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)
+2022-10-01 13:09:31.293 xcodebuild[36463:433911] [MT] DVTAssertions: ASSERTION FAILURE in /System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot2/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/DVTFrameworks/DVTFrameworks-21304/DVTFoundation/PlugInArchitecture/DataModel/DVTPlugIn.m:374
+Details:  Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin)
+Please ensure Xcode packages are up-to-date — try running 'xcodebuild -runFirstLaunch'.
+
+NSBundle error: Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}
+Object:   <DVTPlugIn: 0x600003965e00>
+Method:   -loadAssertingOnError:error:
+Thread:   <_NSMainThread: 0x600001d282c0>{number = 1, name = main}
+Hints: 
+
+Backtrace:
+  0   -[DVTAssertionHandler handleFailureInMethod:object:fileName:lineNumber:assertionSignature:messageFormat:arguments:] (in DVTFoundation)
+  1   _DVTAssertionHandler (in DVTFoundation)
+  2   _DVTAssertionFailureHandler (in DVTFoundation)
+  3   -[DVTPlugIn plugInManager] (in DVTFoundation)
+  4   -[DVTExtension _fireExtensionFaultAssertingOnError:error:] (in DVTFoundation)
+  5   __80-[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:]_block_invoke (in DVTFoundation)
+  6   _dispatch_client_callout (in libdispatch.dylib)
+  7   _dispatch_lane_barrier_sync_invoke_and_complete (in libdispatch.dylib)
+  8   DVTDispatchBarrierSync (in DVTFoundation)
+  9   -[DVTDispatchLock performLockedBlock:] (in DVTFoundation)
+ 10   -[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:] (in DVTFoundation)
+ 11   -[DVTExtension valueForKey:] (in DVTFoundation)
+ 12   _IDEInitializeOnePlugInAndPrerequisites (in IDEFoundation)
+ 13   _IDEInitializePlugIns (in IDEFoundation)
+ 14   IDEInitialize (in IDEFoundation)
+ 15   -[Xcode3CommandLineBuildTool run] (in Xcode3Core)
+ 16   XcodeBuildMain (in libxcodebuildLoader.dylib)
+ 17   start (in dyld)
+sh: line 1: 36465 Abort trap: 6           /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang++ 2> /dev/null
+c++: error: sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang++ 2> /dev/null' failed with exit code 34304: (null) (errno=Invalid argument)
+xcode-select: Failed to locate 'clang++', requesting installation of command line developer tools.
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags: --ec++ 
+
+The output was:
+72
+2022-10-01 13:09:31.917 xcodebuild[36467:433929] [MT] DVTPlugInLoading: Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin), error = Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}, dyldError = dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0000): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)
+2022-10-01 13:09:31.924 xcodebuild[36467:433929] [MT] DVTAssertions: ASSERTION FAILURE in /System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot2/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/DVTFrameworks/DVTFrameworks-21304/DVTFoundation/PlugInArchitecture/DataModel/DVTPlugIn.m:374
+Details:  Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin)
+Please ensure Xcode packages are up-to-date — try running 'xcodebuild -runFirstLaunch'.
+
+NSBundle error: Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}
+Object:   <DVTPlugIn: 0x60000398e620>
+Method:   -loadAssertingOnError:error:
+Thread:   <_NSMainThread: 0x600001dc02c0>{number = 1, name = main}
+Hints: 
+
+Backtrace:
+  0   -[DVTAssertionHandler handleFailureInMethod:object:fileName:lineNumber:assertionSignature:messageFormat:arguments:] (in DVTFoundation)
+  1   _DVTAssertionHandler (in DVTFoundation)
+  2   _DVTAssertionFailureHandler (in DVTFoundation)
+  3   -[DVTPlugIn plugInManager] (in DVTFoundation)
+  4   -[DVTExtension _fireExtensionFaultAssertingOnError:error:] (in DVTFoundation)
+  5   __80-[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:]_block_invoke (in DVTFoundation)
+  6   _dispatch_client_callout (in libdispatch.dylib)
+  7   _dispatch_lane_barrier_sync_invoke_and_complete (in libdispatch.dylib)
+  8   DVTDispatchBarrierSync (in DVTFoundation)
+  9   -[DVTDispatchLock performLockedBlock:] (in DVTFoundation)
+ 10   -[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:] (in DVTFoundation)
+ 11   -[DVTExtension valueForKey:] (in DVTFoundation)
+ 12   _IDEInitializeOnePlugInAndPrerequisites (in IDEFoundation)
+ 13   _IDEInitializePlugIns (in IDEFoundation)
+ 14   IDEInitialize (in IDEFoundation)
+ 15   -[Xcode3CommandLineBuildTool run] (in Xcode3Core)
+ 16   XcodeBuildMain (in libxcodebuildLoader.dylib)
+ 17   start (in dyld)
+sh: line 1: 36469 Abort trap: 6           /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang++ 2> /dev/null
+c++: error: sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang++ 2> /dev/null' failed with exit code 34304: (null) (errno=Invalid argument)
+xcode-select: Failed to locate 'clang++', requesting installation of command line developer tools.
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+72
+2022-10-01 13:09:32.538 xcodebuild[36471:433949] [MT] DVTPlugInLoading: Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin), error = Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}, dyldError = dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0000): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)
+2022-10-01 13:09:32.544 xcodebuild[36471:433949] [MT] DVTAssertions: ASSERTION FAILURE in /System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot2/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/DVTFrameworks/DVTFrameworks-21304/DVTFoundation/PlugInArchitecture/DataModel/DVTPlugIn.m:374
+Details:  Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin)
+Please ensure Xcode packages are up-to-date — try running 'xcodebuild -runFirstLaunch'.
+
+NSBundle error: Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}
+Object:   <DVTPlugIn: 0x600000338e60>
+Method:   -loadAssertingOnError:error:
+Thread:   <_NSMainThread: 0x6000027682c0>{number = 1, name = main}
+Hints: 
+
+Backtrace:
+  0   -[DVTAssertionHandler handleFailureInMethod:object:fileName:lineNumber:assertionSignature:messageFormat:arguments:] (in DVTFoundation)
+  1   _DVTAssertionHandler (in DVTFoundation)
+  2   _DVTAssertionFailureHandler (in DVTFoundation)
+  3   -[DVTPlugIn plugInManager] (in DVTFoundation)
+  4   -[DVTExtension _fireExtensionFaultAssertingOnError:error:] (in DVTFoundation)
+  5   __80-[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:]_block_invoke (in DVTFoundation)
+  6   _dispatch_client_callout (in libdispatch.dylib)
+  7   _dispatch_lane_barrier_sync_invoke_and_complete (in libdispatch.dylib)
+  8   DVTDispatchBarrierSync (in DVTFoundation)
+  9   -[DVTDispatchLock performLockedBlock:] (in DVTFoundation)
+ 10   -[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:] (in DVTFoundation)
+ 11   -[DVTExtension valueForKey:] (in DVTFoundation)
+ 12   _IDEInitializeOnePlugInAndPrerequisites (in IDEFoundation)
+ 13   _IDEInitializePlugIns (in IDEFoundation)
+ 14   IDEInitialize (in IDEFoundation)
+ 15   -[Xcode3CommandLineBuildTool run] (in Xcode3Core)
+ 16   XcodeBuildMain (in libxcodebuildLoader.dylib)
+ 17   start (in dyld)
+sh: line 1: 36473 Abort trap: 6           /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang++ 2> /dev/null
+c++: error: sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang++ 2> /dev/null' failed with exit code 34304: (null) (errno=Invalid argument)
+xcode-select: Failed to locate 'clang++', requesting installation of command line developer tools.
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /usr/bin/c++ 
+Build flags: 
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+72
+2022-10-01 13:09:33.169 xcodebuild[36475:433968] [MT] DVTPlugInLoading: Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin), error = Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}, dyldError = dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0000): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)
+2022-10-01 13:09:33.175 xcodebuild[36475:433968] [MT] DVTAssertions: ASSERTION FAILURE in /System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot2/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/DVTFrameworks/DVTFrameworks-21304/DVTFoundation/PlugInArchitecture/DataModel/DVTPlugIn.m:374
+Details:  Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin)
+Please ensure Xcode packages are up-to-date — try running 'xcodebuild -runFirstLaunch'.
+
+NSBundle error: Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}
+Object:   <DVTPlugIn: 0x600001fe45a0>
+Method:   -loadAssertingOnError:error:
+Thread:   <_NSMainThread: 0x600003ba82c0>{number = 1, name = main}
+Hints: 
+
+Backtrace:
+  0   -[DVTAssertionHandler handleFailureInMethod:object:fileName:lineNumber:assertionSignature:messageFormat:arguments:] (in DVTFoundation)
+  1   _DVTAssertionHandler (in DVTFoundation)
+  2   _DVTAssertionFailureHandler (in DVTFoundation)
+  3   -[DVTPlugIn plugInManager] (in DVTFoundation)
+  4   -[DVTExtension _fireExtensionFaultAssertingOnError:error:] (in DVTFoundation)
+  5   __80-[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:]_block_invoke (in DVTFoundation)
+  6   _dispatch_client_callout (in libdispatch.dylib)
+  7   _dispatch_lane_barrier_sync_invoke_and_complete (in libdispatch.dylib)
+  8   DVTDispatchBarrierSync (in DVTFoundation)
+  9   -[DVTDispatchLock performLockedBlock:] (in DVTFoundation)
+ 10   -[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:] (in DVTFoundation)
+ 11   -[DVTExtension valueForKey:] (in DVTFoundation)
+ 12   _IDEInitializeOnePlugInAndPrerequisites (in IDEFoundation)
+ 13   _IDEInitializePlugIns (in IDEFoundation)
+ 14   IDEInitialize (in IDEFoundation)
+ 15   -[Xcode3CommandLineBuildTool run] (in Xcode3Core)
+ 16   XcodeBuildMain (in libxcodebuildLoader.dylib)
+ 17   start (in dyld)
+sh: line 1: 36477 Abort trap: 6           /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang++ 2> /dev/null
+c++: error: sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang++ 2> /dev/null' failed with exit code 34304: (null) (errno=Invalid argument)
+xcode-select: Failed to locate 'clang++', requesting installation of command line developer tools.
+
+
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+2022-10-01 13:09:33.783 xcodebuild[36479:433987] [MT] DVTPlugInLoading: Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin), error = Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}, dyldError = dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0000): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)
+2022-10-01 13:09:33.790 xcodebuild[36479:433987] [MT] DVTAssertions: ASSERTION FAILURE in /System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot2/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/DVTFrameworks/DVTFrameworks-21304/DVTFoundation/PlugInArchitecture/DataModel/DVTPlugIn.m:374
+Details:  Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin)
+Please ensure Xcode packages are up-to-date — try running 'xcodebuild -runFirstLaunch'.
+
+NSBundle error: Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}
+Object:   <DVTPlugIn: 0x600003a09680>
+Method:   -loadAssertingOnError:error:
+Thread:   <_NSMainThread: 0x600001e442c0>{number = 1, name = main}
+Hints: 
+
+Backtrace:
+  0   -[DVTAssertionHandler handleFailureInMethod:object:fileName:lineNumber:assertionSignature:messageFormat:arguments:] (in DVTFoundation)
+  1   _DVTAssertionHandler (in DVTFoundation)
+  2   _DVTAssertionFailureHandler (in DVTFoundation)
+  3   -[DVTPlugIn plugInManager] (in DVTFoundation)
+  4   -[DVTExtension _fireExtensionFaultAssertingOnError:error:] (in DVTFoundation)
+  5   __80-[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:]_block_invoke (in DVTFoundation)
+  6   _dispatch_client_callout (in libdispatch.dylib)
+  7   _dispatch_lane_barrier_sync_invoke_and_complete (in libdispatch.dylib)
+  8   DVTDispatchBarrierSync (in DVTFoundation)
+  9   -[DVTDispatchLock performLockedBlock:] (in DVTFoundation)
+ 10   -[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:] (in DVTFoundation)
+ 11   -[DVTExtension valueForKey:] (in DVTFoundation)
+ 12   _IDEInitializeOnePlugInAndPrerequisites (in IDEFoundation)
+ 13   _IDEInitializePlugIns (in IDEFoundation)
+ 14   IDEInitialize (in IDEFoundation)
+ 15   -[Xcode3CommandLineBuildTool run] (in Xcode3Core)
+ 16   XcodeBuildMain (in libxcodebuildLoader.dylib)
+ 17   start (in dyld)
+sh: line 1: 36481 Abort trap: 6           /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang++ 2> /dev/null
+c++: error: sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang++ 2> /dev/null' failed with exit code 34304: (null) (errno=Invalid argument)
+xcode-select: Failed to locate 'clang++', requesting installation of command line developer tools.
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+2022-10-01 13:09:34.401 xcodebuild[36483:434010] [MT] DVTPlugInLoading: Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin), error = Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}, dyldError = dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0000): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)
+2022-10-01 13:09:34.407 xcodebuild[36483:434010] [MT] DVTAssertions: ASSERTION FAILURE in /System/Volumes/Data/SWE/Apps/DT/BuildRoots/BuildRoot2/ActiveBuildRoot/Library/Caches/com.apple.xbs/Sources/DVTFrameworks/DVTFrameworks-21304/DVTFoundation/PlugInArchitecture/DataModel/DVTPlugIn.m:374
+Details:  Failed to load code for plug-in com.apple.dt.IDESimulatorAvailability (/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin)
+Please ensure Xcode packages are up-to-date — try running 'xcodebuild -runFirstLaunch'.
+
+NSBundle error: Error Domain=NSCocoaErrorDomain Code=3588 "dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file)" UserInfo={NSLocalizedFailureReason=The bundle couldn’t be loaded., NSLocalizedRecoverySuggestion=Try reinstalling the bundle., NSFilePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, NSDebugDescription=dlopen(/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability, 0x0109): Library not loaded: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator'
+  Referenced from: '/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin/Contents/MacOS/IDESimulatorAvailability'
+  Reason: tried: '/Library/Developer/PrivateFrameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), '/System/Library/Frameworks/CoreSimulator.framework/Versions/A/CoreSimulator' (no such file), NSBundlePath=/Applications/Xcode.app/Contents/PlugIns/IDESimulatorAvailability.ideplugin, NSLocalizedDescription=The bundle “IDESimulatorAvailability” couldn’t be loaded.}
+Object:   <DVTPlugIn: 0x6000009c0e60>
+Method:   -loadAssertingOnError:error:
+Thread:   <_NSMainThread: 0x600002d8c2c0>{number = 1, name = main}
+Hints: 
+
+Backtrace:
+  0   -[DVTAssertionHandler handleFailureInMethod:object:fileName:lineNumber:assertionSignature:messageFormat:arguments:] (in DVTFoundation)
+  1   _DVTAssertionHandler (in DVTFoundation)
+  2   _DVTAssertionFailureHandler (in DVTFoundation)
+  3   -[DVTPlugIn plugInManager] (in DVTFoundation)
+  4   -[DVTExtension _fireExtensionFaultAssertingOnError:error:] (in DVTFoundation)
+  5   __80-[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:]_block_invoke (in DVTFoundation)
+  6   _dispatch_client_callout (in libdispatch.dylib)
+  7   _dispatch_lane_barrier_sync_invoke_and_complete (in libdispatch.dylib)
+  8   DVTDispatchBarrierSync (in DVTFoundation)
+  9   -[DVTDispatchLock performLockedBlock:] (in DVTFoundation)
+ 10   -[DVTExtension _valueForKey:inParameterData:usingSchema:assertingOnError:error:] (in DVTFoundation)
+ 11   -[DVTExtension valueForKey:] (in DVTFoundation)
+ 12   _IDEInitializeOnePlugInAndPrerequisites (in IDEFoundation)
+ 13   _IDEInitializePlugIns (in IDEFoundation)
+ 14   IDEInitialize (in IDEFoundation)
+ 15   -[Xcode3CommandLineBuildTool run] (in Xcode3Core)
+ 16   XcodeBuildMain (in libxcodebuildLoader.dylib)
+ 17   start (in dyld)
+sh: line 1: 36485 Abort trap: 6           /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang++ 2> /dev/null
+c++: error: sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -find clang++ 2> /dev/null' failed with exit code 34304: (null) (errno=Invalid argument)
+xcode-select: Failed to locate 'clang++', requesting installation of command line developer tools.
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: /Users/alexey/Courses/SFND_Lidar_Obstacle_Detection/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_cd610/fast && sh: line 1: 36491 Abort trap: 6           /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk '' -find make 2> /dev/null
+make: error: sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk '' -find make 2> /dev/null' failed with exit code 34304: (null) (errno=No such file or directory)
+xcode-select: Failed to locate 'make', requesting installation of command line developer tools.
+
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: /Users/alexey/Courses/SFND_Lidar_Obstacle_Detection/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_667cd/fast && sh: line 1: 36498 Abort trap: 6           /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk '' -find make 2> /dev/null
+make: error: sh -c '/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -sdk '' -find make 2> /dev/null' failed with exit code 34304: (null) (errno=No such file or directory)
+xcode-select: Failed to locate 'make', requesting installation of command line developer tools.
+
+
+
