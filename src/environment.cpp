@@ -52,6 +52,10 @@ void simpleHighway(pcl::visualization::PCLVisualizer::Ptr& viewer)
 //    renderRays(viewer, lidar->position, point_cloud);
     renderPointCloud(viewer, point_cloud, "point_cloud");
 //    point_cloud->points;
+    ProcessPointClouds<pcl::PointXYZ> processPointClouds;
+    std::pair<pcl::PointCloud<pcl::PointXYZ>::Ptr, pcl::PointCloud<pcl::PointXYZ>::Ptr> segmentCloud = processPointClouds.SegmentPlane(point_cloud, 100, 0.2);
+    renderPointCloud(viewer,segmentCloud.first,"obstCloud",Color(1,0,0));
+    renderPointCloud(viewer,segmentCloud.second,"planeCloud",Color(0,1,0));
 }
 
 
