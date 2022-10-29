@@ -3536,8 +3536,44 @@ CMakeFiles/quizRansac.dir/ransac2d.cpp.o: ../ransac2d.cpp \
   /opt/homebrew/include/pcl-1.12/pcl/common/eigen.h \
   /opt/homebrew/include/pcl-1.12/pcl/common/impl/eigen.hpp \
   /opt/homebrew/include/pcl-1.12/pcl/common/impl/transforms.hpp \
-  /Users/alexey/Courses/SFND_Lidar_Obstacle_Detection/src/processPointClouds.cpp
+  /Users/alexey/Courses/SFND_Lidar_Obstacle_Detection/src/processPointClouds.cpp \
+  /opt/homebrew/include/eigen3/Eigen/Dense \
+  /opt/homebrew/include/eigen3/Eigen/Eigenvalues \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/RealSchur.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/EigenSolver.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/RealSchur.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/ComplexEigenSolver.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h
 
+
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/RealQZ.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/ComplexEigenSolver.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/ComplexSchur.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/EigenSolver.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/RealSchur.h:
 
 /opt/homebrew/include/pcl-1.12/pcl/common/impl/transforms.hpp:
 
@@ -4749,6 +4785,8 @@ CMakeFiles/quizRansac.dir/ransac2d.cpp.o: ../ransac2d.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/optional:
 
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/Tridiagonalization.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__node_handle:
 
 /opt/homebrew/include/eigen3/Eigen/Householder:
@@ -5216,6 +5254,8 @@ CMakeFiles/quizRansac.dir/ransac2d.cpp.o: ../ransac2d.cpp \
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/_types/_uint16_t.h:
 
 /opt/homebrew/include/boost/mpl/aux_/preprocessed/gcc/and.hpp:
+
+/opt/homebrew/include/eigen3/Eigen/Dense:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_in_port_t.h:
 
@@ -6495,6 +6535,8 @@ CMakeFiles/quizRansac.dir/ransac2d.cpp.o: ../ransac2d.cpp \
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__utility/piecewise_construct.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Eigenvalues/HessenbergDecomposition.h:
+
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/inttypes.h:
 
 /opt/homebrew/include/boost/mpl/aux_/largest_int.hpp:
@@ -6506,6 +6548,8 @@ CMakeFiles/quizRansac.dir/ransac2d.cpp.o: ../ransac2d.cpp \
 /opt/homebrew/include/boost/core/allocator_access.hpp:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/string:
+
+/opt/homebrew/include/eigen3/Eigen/Eigenvalues:
 
 /opt/homebrew/include/boost/fusion/support/detail/enabler.hpp:
 
