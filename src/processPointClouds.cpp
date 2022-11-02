@@ -1,7 +1,7 @@
 // PCL lib Functions for processing point clouds 
 
 #include "processPointClouds.h"
-
+#include "ransac.cpp"
 
 //constructor:
 template<typename PointT>
@@ -10,7 +10,7 @@ ProcessPointClouds<PointT>::ProcessPointClouds() {}
 
 //de-constructor:
 template<typename PointT>
-ProcessPointClouds<PointT>::~ProcessPointClouds() {}
+ProcessPointClouds<PointT>::~ProcessPointClouds() = default;
 
 
 template<typename PointT>
@@ -28,13 +28,42 @@ ProcessPointClouds<PointT>::FilterCloud(typename pcl::PointCloud<PointT>::Ptr cl
     auto startTime = std::chrono::steady_clock::now();
 
     // TODO:: Fill in the function to do voxel grid point reduction and region based filtering
+    typename pcl::PointCloud<PointT>::Ptr filtered_cloud{new pcl::PointCloud<PointT>()};
+    pcl::VoxelGrid<PointT> vg;
+    vg.setInputCloud(cloud);
+    vg.setLeafSize(filterRes, filterRes, filterRes);
+    vg.filter(*filtered_cloud);
+    typename pcl::PointCloud<PointT>::Ptr cloud_region{new pcl::PointCloud<PointT>()};
+
+    pcl::CropBox<PointT> region(true);
+    region.setMin(minPoint);
+    region.setMax(maxPoint);
+    region.setInputCloud(filtered_cloud);
+    region.filter(*cloud_region);
+
+    std::vector<int> indices;
+    pcl::CropBox<PointT> roof(true);
+    roof.setMin(Eigen::Vector4f(-1.5, -1.7, -1, 1));
+    roof.setMax(Eigen::Vector4f(2.6, 1.7, -0.4, 1));
+    roof.setInputCloud(cloud_region);
+    roof.filter(indices);
+    pcl::PointIndices::Ptr inliers {new pcl::PointIndices};
+    for (int point: indices) {
+        inliers->indices.push_back(point);
+    }
+
+    pcl::ExtractIndices<PointT> extract;
+    extract.setInputCloud(cloud_region);
+    extract.setIndices(inliers);
+    extract.setNegative(true);
+    extract.filter(*cloud_region);
+//    std::vector<int> indices;
 
     auto endTime = std::chrono::steady_clock::now();
     auto elapsedTime = std::chrono::duration_cast<std::chrono::milliseconds>(endTime - startTime);
     std::cout << "filtering took " << elapsedTime.count() << " milliseconds" << std::endl;
 
-    return cloud;
-
+    return cloud_region;
 }
 
 
@@ -68,18 +97,22 @@ ProcessPointClouds<PointT>::SegmentPlane(typename pcl::PointCloud<PointT>::Ptr c
                                          float distanceThreshold) {
     // Time segmentation process
     auto startTime = std::chrono::steady_clock::now();
-    // TODO:: Fill in this function to find inliers for the cloud.
-    pcl::ModelCoefficients::Ptr coefficients(new pcl::ModelCoefficients());
+//    pcl::ModelCoefficients::Ptr coefficients(new pcl::ModelCoefficients());
     pcl::PointIndices::Ptr inliers{new pcl::PointIndices};
-    pcl::SACSegmentation<PointT> seg;
-    seg.setOptimizeCoefficients(true);
-    seg.setModelType(pcl::SACMODEL_PLANE);
-    seg.setMethodType(pcl::SAC_RANSAC);
-    seg.setDistanceThreshold(distanceThreshold);
-    seg.setMaxIterations(maxIterations);
+//    pcl::SACSegmentation<PointT> seg;
+//    seg.setOptimizeCoefficients(true);
+//    seg.setModelType(pcl::SACMODEL_PLANE);
+//    seg.setMethodType(pcl::SAC_RANSAC);
+//    seg.setDistanceThreshold(distanceThreshold);
+//    seg.setMaxIterations(maxIterations);
+//
+//    seg.setInputCloud(cloud);
+//    seg.segment(*inliers, *coefficients);
 
-    seg.setInputCloud(cloud);
-    seg.segment(*inliers, *coefficients);
+    auto plane_indices = ransac::segment<PointT>(cloud, maxIterations, distanceThreshold);
+    for (auto point: plane_indices) {
+        inliers->indices.push_back(point);
+    }
 
     if (inliers->indices.empty()) {
         PCL_ERROR("Model doesn't work");
@@ -109,7 +142,7 @@ ProcessPointClouds<PointT>::Clustering(typename pcl::PointCloud<PointT>::Ptr clo
     tree->setInputCloud(cloud);
     std::vector<pcl::PointIndices> cluster_indices;
 
-    pcl::EuclideanClusterExtraction<pcl::PointXYZ> ec;
+    pcl::EuclideanClusterExtraction<PointT> ec;
     ec.setClusterTolerance(clusterTolerance); // 2cm
     ec.setMinClusterSize(minSize);
     ec.setMaxClusterSize(maxSize);
