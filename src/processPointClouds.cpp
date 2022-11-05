@@ -49,7 +49,7 @@ ProcessPointClouds<PointT>::FilterCloud(typename pcl::PointCloud<PointT>::Ptr cl
     roof.setMax(Eigen::Vector4f(2.6, 1.7, -0.4, 1));
     roof.setInputCloud(cloud_region);
     roof.filter(indices);
-    pcl::PointIndices::Ptr inliers {new pcl::PointIndices};
+    pcl::PointIndices::Ptr inliers{new pcl::PointIndices};
     for (int point: indices) {
         inliers->indices.push_back(point);
     }
@@ -99,23 +99,11 @@ ProcessPointClouds<PointT>::SegmentPlane(typename pcl::PointCloud<PointT>::Ptr c
                                          float distanceThreshold) {
     // Time segmentation process
     auto startTime = std::chrono::steady_clock::now();
-//    pcl::ModelCoefficients::Ptr coefficients(new pcl::ModelCoefficients());
     pcl::PointIndices::Ptr inliers{new pcl::PointIndices};
-//    pcl::SACSegmentation<PointT> seg;
-//    seg.setOptimizeCoefficients(true);
-//    seg.setModelType(pcl::SACMODEL_PLANE);
-//    seg.setMethodType(pcl::SAC_RANSAC);
-//    seg.setDistanceThreshold(distanceThreshold);
-//    seg.setMaxIterations(maxIterations);
-
-//    seg.setInputCloud(cloud);
-//    seg.segment(*inliers, *coefficients);
-
     auto plane_indices = hw::ransac::segment<PointT>(cloud, maxIterations, distanceThreshold);
     for (auto point_idx: plane_indices) {
         inliers->indices.push_back(point_idx);
     }
-
     if (inliers->indices.empty()) {
         PCL_ERROR("Model doesn't work");
     }
@@ -134,31 +122,29 @@ std::vector<typename pcl::PointCloud<PointT>::Ptr>
 ProcessPointClouds<PointT>::Clustering(typename pcl::PointCloud<PointT>::Ptr cloud, float clusterTolerance, int minSize,
                                        int maxSize) {
 
-    // Time clustering process
     auto startTime = std::chrono::steady_clock::now();
 
     std::vector<typename pcl::PointCloud<PointT>::Ptr> clusters;
     std::vector<pcl::Vector3fMap> points;
 
-    // TODO:: Fill in the function to perform euclidean clustering to group detected obstacles
-//    typename pcl::search::KdTree<PointT>::Ptr tree(new pcl::search::KdTree<PointT>);
-
-    auto *tree (new hw::search::KdTree<pcl::Vector3fMap>);
+    auto *tree(new hw::search::KdTree<pcl::Vector3fMap>);
     for (int i = 0; i < cloud->points.size(); i++) {
         tree->insert(cloud->points[i].getVector3fMap(), i);
         points.push_back(cloud->points[i].getVector3fMap());
     }
 
-    auto cluster_indices = hw::cluster::cluster(points, tree, 0.6);
+    auto cluster_indices = hw::cluster::cluster(points, tree,clusterTolerance);
     for (auto &ci: cluster_indices) {
         typename pcl::PointCloud<PointT>::Ptr aux{new pcl::PointCloud<PointT>};
-        for (auto index: ci) {
-            aux->points.push_back(cloud->points[index]);
+        if (ci.size() >= minSize && ci.size() <= maxSize) {
+            for (auto index: ci) {
+                aux->points.push_back(cloud->points[index]);
+            }
+            aux->width = aux->points.size();
+            aux->height = 1;
+            aux->is_dense = true;
+            clusters.push_back(aux);
         }
-        aux->width = aux->points.size();
-        aux->height = 1;
-        aux->is_dense = true;
-        clusters.push_back(aux);
     }
 
     auto endTime = std::chrono::steady_clock::now();
