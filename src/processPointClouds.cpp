@@ -2,6 +2,8 @@
 
 #include "processPointClouds.h"
 #include "ransac.cpp"
+#include "search.cpp"
+#include "cluster.cpp"
 
 //constructor:
 template<typename PointT>
@@ -105,13 +107,13 @@ ProcessPointClouds<PointT>::SegmentPlane(typename pcl::PointCloud<PointT>::Ptr c
 //    seg.setMethodType(pcl::SAC_RANSAC);
 //    seg.setDistanceThreshold(distanceThreshold);
 //    seg.setMaxIterations(maxIterations);
-//
+
 //    seg.setInputCloud(cloud);
 //    seg.segment(*inliers, *coefficients);
 
-    auto plane_indices = ransac::segment<PointT>(cloud, maxIterations, distanceThreshold);
-    for (auto point: plane_indices) {
-        inliers->indices.push_back(point);
+    auto plane_indices = hw::ransac::segment<PointT>(cloud, maxIterations, distanceThreshold);
+    for (auto point_idx: plane_indices) {
+        inliers->indices.push_back(point_idx);
     }
 
     if (inliers->indices.empty()) {
@@ -136,23 +138,21 @@ ProcessPointClouds<PointT>::Clustering(typename pcl::PointCloud<PointT>::Ptr clo
     auto startTime = std::chrono::steady_clock::now();
 
     std::vector<typename pcl::PointCloud<PointT>::Ptr> clusters;
+    std::vector<pcl::Vector3fMap> points;
 
     // TODO:: Fill in the function to perform euclidean clustering to group detected obstacles
-    typename pcl::search::KdTree<PointT>::Ptr tree(new pcl::search::KdTree<PointT>);
-    tree->setInputCloud(cloud);
-    std::vector<pcl::PointIndices> cluster_indices;
+//    typename pcl::search::KdTree<PointT>::Ptr tree(new pcl::search::KdTree<PointT>);
 
-    pcl::EuclideanClusterExtraction<PointT> ec;
-    ec.setClusterTolerance(clusterTolerance); // 2cm
-    ec.setMinClusterSize(minSize);
-    ec.setMaxClusterSize(maxSize);
-    ec.setSearchMethod(tree);
-    ec.setInputCloud(cloud);
-    ec.extract(cluster_indices);
+    auto *tree (new hw::search::KdTree<pcl::Vector3fMap>);
+    for (int i = 0; i < cloud->points.size(); i++) {
+        tree->insert(cloud->points[i].getVector3fMap(), i);
+        points.push_back(cloud->points[i].getVector3fMap());
+    }
 
+    auto cluster_indices = hw::cluster::cluster(points, tree, 0.6);
     for (auto &ci: cluster_indices) {
         typename pcl::PointCloud<PointT>::Ptr aux{new pcl::PointCloud<PointT>};
-        for (auto index: ci.indices) {
+        for (auto index: ci) {
             aux->points.push_back(cloud->points[index]);
         }
         aux->width = aux->points.size();

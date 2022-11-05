@@ -79,8 +79,8 @@ void cityBlock(pcl::visualization::PCLVisualizer::Ptr &viewer, ProcessPointCloud
     // ----------------------------------------------------
 
     pcl::PointCloud<pcl::PointXYZI>::Ptr filtered_cloud;
-    filtered_cloud = point_processor->FilterCloud(input_cloud, 0.5f, Eigen::Vector4f(-15.0, -15.0, -3.0, 1),
-                                                  Eigen::Vector4f(15.0, 15.0, 15.0, 1));
+    filtered_cloud = point_processor->FilterCloud(input_cloud, 0.5f, Eigen::Vector4f(-15.0, -8.0, -3.0, 1),
+                                                  Eigen::Vector4f(15.0, 8.0, 3.0, 1));
 
     auto segmented_cloud = point_processor->SegmentPlane(
             filtered_cloud, 100, 0.55);
@@ -89,7 +89,7 @@ void cityBlock(pcl::visualization::PCLVisualizer::Ptr &viewer, ProcessPointCloud
     renderPointCloud(viewer, segmented_cloud.second, "planeCloud", Color(0, 1, 0));
 
     int clusterId = 0;
-    std::vector<Color> colors = {Color(1, 0, 0), Color(0, 1, 0), Color(0, 0, 1), Color(0, 1, 1)};
+    std::vector<Color> colors = {Color(1, 0, 0), Color(0, 1, 0), Color(0, 0, 1)};
 
     auto clustered_cloud = point_processor->Clustering(segmented_cloud.first,
                                                        1.0, 3, 100);
@@ -101,7 +101,7 @@ void cityBlock(pcl::visualization::PCLVisualizer::Ptr &viewer, ProcessPointCloud
         renderBox(viewer, box, clusterId);
         ++clusterId;
     }
-    renderPointCloud(viewer, filtered_cloud, "InputCloud");
+//    renderPointCloud(viewer, filtered_cloud, "InputCloud");
 }
 
 

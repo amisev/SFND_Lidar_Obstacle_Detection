@@ -6,6 +6,7 @@
 #include <chrono>
 #include <string>
 #include "kdtree.h"
+#include <pcl/point_representation.h>
 
 // Arguments:
 // window is the region to draw box around
@@ -29,8 +30,8 @@ pcl::PointCloud<pcl::PointXYZ>::Ptr CreateData(std::vector<std::vector<float>> p
         point.x = points[i][0];
         point.y = points[i][1];
         point.z = 0;
-
-        cloud->points.push_back(point);
+        point.getVector3fMap()
+        eloud->points.push_back(point);
 
     }
     cloud->width = cloud->points.size();

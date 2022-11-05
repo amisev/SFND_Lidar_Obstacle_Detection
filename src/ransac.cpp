@@ -4,7 +4,7 @@
 #include "ransac.h"
 
 template<typename PointT>
-float ransac::get_point_plane_dist(PointT point1, PointT point2, PointT point3, PointT point) {
+float hw::ransac::get_point_plane_dist(PointT point1, PointT point2, PointT point3, PointT point) {
     float a = (point2.y - point1.y) * (point3.z - point1.z) - (point2.z - point1.z) * (point3.y - point1.y);
     float b = (point2.z - point1.z) * (point3.x - point1.x) - (point2.x - point1.x) * (point3.z - point1.z);
     float c = (point2.x - point1.x) * (point3.y - point1.y) - (point2.y - point1.y) * (point3.x - point1.x);
@@ -15,9 +15,9 @@ float ransac::get_point_plane_dist(PointT point1, PointT point2, PointT point3, 
 
 template<typename PointT>
 std::unordered_set<int>
-ransac::segment(typename pcl::PointCloud<PointT>::Ptr cloud, int maxIterations, float distanceTol) {
+hw::ransac::segment(typename pcl::PointCloud<PointT>::Ptr cloud, int maxIterations, float distanceTol) {
     std::unordered_set<int> inliers_result;
-    std::srand(std::time(NULL));
+    std::srand(std::time(nullptr));
     size_t idx1, idx2, idx3;
     PointT point1, point2, point3;
     bool found_points = false;
@@ -32,7 +32,7 @@ ransac::segment(typename pcl::PointCloud<PointT>::Ptr cloud, int maxIterations, 
             point1 = cloud->points[idx1];
             point2 = cloud->points[idx2];
             point3 = cloud->points[idx3];
-            if (!ransac::collinear(point1, point2, point3)) {
+            if (!hw::ransac::collinear(point1, point2, point3)) {
                 found_points = true;
             }
         }
@@ -40,7 +40,7 @@ ransac::segment(typename pcl::PointCloud<PointT>::Ptr cloud, int maxIterations, 
         aux.clear();
         for (int j = 0; j < cloud->size(); j++) {
             auto point = cloud->points[j];
-            auto dist = ransac::get_point_plane_dist(point1, point2, point3, point);
+            auto dist = hw::ransac::get_point_plane_dist(point1, point2, point3, point);
             if (dist <= distanceTol) {
                 ++matches;
                 aux.insert(j);
@@ -55,19 +55,21 @@ ransac::segment(typename pcl::PointCloud<PointT>::Ptr cloud, int maxIterations, 
 }
 
 template<typename PointT>
-bool ransac::collinear(PointT point1, PointT point2, PointT point3) {
+bool hw::ransac::collinear(PointT point1, PointT point2, PointT point3) {
     if (point3.x == point1.x) {
         if ((point3.y == point1.y) && (point3.z = point1.z)) {
             return true;
         } else {
             if (point2.x == point1.x) {
-                float area = point1.y*(point2.z - point3.z) + point2.y*(point3.z - point1.z) + point3.y*(point1.z - point2.z);
+                float area = point1.y * (point2.z - point3.z) + point2.y * (point3.z - point1.z) +
+                             point3.y * (point1.z - point2.z);
                 return area == 0;
             }
         }
     } else {
         float coef = (point2.x - point1.x) * 1.0f / (point3.x - point1.x);
-        if (((point2.y - point1.y) == coef*(point3.y - point1.y)) && ((point2.z - point1.z) == coef*(point3.z - point1.z))) {
+        if (((point2.y - point1.y) == coef * (point3.y - point1.y)) &&
+            ((point2.z - point1.z) == coef * (point3.z - point1.z))) {
             return true;
         }
     }

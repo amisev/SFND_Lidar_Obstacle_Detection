@@ -19,6 +19,8 @@
 #include <chrono>
 #include "render/box.h"
 #include "ransac.h"
+#include "search.h"
+#include "cluster.h"
 
 template<typename PointT>
 class ProcessPointClouds {
